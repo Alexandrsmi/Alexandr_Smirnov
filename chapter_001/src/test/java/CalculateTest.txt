@@ -1,0 +1,10 @@
+package ru.job4j;
+
+public class CalculateTest {
+    @Test
+    public void whenExecuteMainThenPrintToConsole() {
+        Calculate calculate = new Calculate();
+        calculate.addSum(3, 4);
+        Assert.assertEquals(7, 7);
+    }
+}
