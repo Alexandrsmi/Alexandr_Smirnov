@@ -6,8 +6,8 @@ package lesson_4.factorial;
 	 */
 public class Factorial {
 	/**
-	 * Метод чычисляющий факториал числа.
-	  @finish значение факториала.
+	 * Метод вычисляющий факториал числа.
+	  @fact значение факториала.
 	 */
     public long getFactorial(long fact) {
         long counter = 1;
