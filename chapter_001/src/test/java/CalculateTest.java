@@ -2,8 +2,6 @@ import lesson_2.task_3.Calculate;
 import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
-
-
 /**
  * Тесты калькулятора
  */

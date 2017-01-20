@@ -2,7 +2,6 @@ import lesson_3.max.Max;
 import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
-
 /**
  * Тест определения наибольшего числа.
  */

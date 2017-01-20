@@ -1,12 +1,11 @@
 import lesson_5.Turn;
 import org.junit.*;
-
-
 /**
  * Тест переворота массива
  */
 public class TurnTest {
-    @Test
+   
+   @Test
     public void getBackArrayTest() {
         Turn turn = new Turn();
         int[] mass = {3, 2, 1};
