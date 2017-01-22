@@ -1,37 +1,58 @@
 import lesson_2.task_3.Calculate;
+
 import org.junit.Test;
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 /**
- * Тесты калькулятора
+ * Тесты калькулятора.
  */
 public class CalculateTest {
-    
+    /**
+	* Тест метода сложения.
+	*/
 	@Test
     public void getSumTest() {
+		final double three = 3.0;
+		final double four = 4.0;
+		final double seven = 7.0;
         Calculate calculate = new Calculate();
-        calculate.getSum(3, 4);
-        assertThat(calculate.getResult(),is (7.0));
+        calculate.getSum(three, four);
+        assertThat(seven, is(calculate.getResult()));
     }
-	
+	/**
+	* Тест метода вычитания.
+	*/
     @Test
     public void getSubTest() {
+		final double three = 3.0;
+		final double four = 4.0;
+		final double minusOne = -1.0;
         Calculate calculate = new Calculate();
-        calculate.getSub(3, 4);
-        assertThat(calculate.getResult(),is (-1.0));
+        calculate.getSub(three, four);
+        assertThat(minusOne, is(calculate.getResult()));
     }
-    
+    /**
+	* Тест метода деления.
+	*/
 	@Test
     public void getDivTest() {
+		final double four = 4.0;
+		final double eight = 8.0;
+		final double two = 2.0;
         Calculate calculate = new Calculate();
-        calculate.getDiv(8, 4);
-        assertThat(calculate.getResult(),is (2.0));
+        calculate.getDiv(eight, four);
+        assertThat(two, is(calculate.getResult()));
     }
-    
+    /**
+	* Тест метода умножения.
+	*/
 	@Test
     public void getMulTest() {
+		final double three = 3.0;
+		final double four = 4.0;
+		final double twelve = 12.0;
         Calculate calculate = new Calculate();
-        calculate.getMul(3, 4);
-        assertThat(calculate.getResult(),is (12.0));
+        calculate.getMul(three, four);
+        assertThat(,is (calculate.getResult()));
     }
 }
