@@ -6,11 +6,6 @@ package lesson_4.counter;
 	 * @since 21.01.2017
 	 */
 public class Counter {
-    private  long sum = 0;
-
-    public Counter() {
-        this.sum = sum;
-    }
 /**
 	 * Метод вычисляющий сумму четных чисел.
 	 * @start начальное значение интервала
@@ -18,6 +13,7 @@ public class Counter {
 	 */
     public long add(long start, long finish) {
         long counter = start;
+		long sum = 0;
         while (counter <= finish) {
             if (counter % 2 == 0) {
                 sum = sum + counter;
