@@ -13,8 +13,7 @@ public class Max {
 	 * @second второй аргумент.
 	 */
     public int max(int first, int second){
-       int max = first > second ? first : second;
-        return max;
+       return first > second ? first : second;  
     }
 	/**
 	 * Метод нахождения наибольшего числа из трех.
