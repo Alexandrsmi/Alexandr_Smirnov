@@ -4,8 +4,7 @@ package lesson_5;
 	 * @since 21.01.2017
 	 */
 public class BubblesSort {
-    private int[] values ;
-	/**
+ 	/**
 	 * Метод сортировки масива с помощью алгоритма пузырьковой сортировки.
 	 * @int[]array входящий массив.
 	 */
