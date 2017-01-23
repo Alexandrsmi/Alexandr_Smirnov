@@ -1,113 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="6.11.2">
-<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\lesson_2\task_3\Calculate.java">
-<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-<error line="1" column="9" severity="error" message="Name &apos;lesson_2.task_3&apos; must match pattern &apos;^[a-z]+(\.[a-zA-Z_][a-zA-Z0-9_]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
-<error line="3" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="14" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="22" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="23" column="31" severity="error" message="Expected @param tag for &apos;first&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="23" column="45" severity="error" message="Expected @param tag for &apos;second&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="31" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="32" column="31" severity="error" message="Expected @param tag for &apos;first&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="32" column="45" severity="error" message="Expected @param tag for &apos;second&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="40" column="31" severity="error" message="Expected @param tag for &apos;first&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="40" column="45" severity="error" message="Expected @param tag for &apos;second&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="48" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="49" column="31" severity="error" message="Expected @param tag for &apos;first&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="49" column="45" severity="error" message="Expected @param tag for &apos;second&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="55" severity="error" message="Expected an @return tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\BubblesSort.java">
 </file>
-<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\lesson_3\max\Max.java">
-<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-<error line="1" column="9" severity="error" message="Name &apos;lesson_3.max&apos; must match pattern &apos;^[a-z]+(\.[a-zA-Z_][a-zA-Z0-9_]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
-<error line="3" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="8" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="15" severity="error" message="Expected an @return tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="15" column="24" severity="error" message="Expected @param tag for &apos;first&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="15" column="35" severity="error" message="Expected @param tag for &apos;second&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="15" column="42" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="16" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="24" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="25" severity="error" message="Expected an @return tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="25" column="24" severity="error" message="Expected @param tag for &apos;first&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="25" column="35" severity="error" message="Expected @param tag for &apos;second&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="25" column="47" severity="error" message="Expected @param tag for &apos;third&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\calculate\Calculate.java">
 </file>
-<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\lesson_4\counter\Counter.java">
-<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-<error line="1" column="9" severity="error" message="Name &apos;lesson_4.counter&apos; must match pattern &apos;^[a-z]+(\.[a-zA-Z_][a-zA-Z0-9_]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
-<error line="3" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="14" severity="error" message="Expected an @return tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="14" column="26" severity="error" message="Expected @param tag for &apos;start&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="14" column="38" severity="error" message="Expected @param tag for &apos;finish&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\calculate\package-info.java">
 </file>
-<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\lesson_4\factorial\factorial.java">
-<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-<error line="1" column="9" severity="error" message="Name &apos;lesson_4.factorial&apos; must match pattern &apos;^[a-z]+(\.[a-zA-Z_][a-zA-Z0-9_]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
-<error line="12" severity="error" message="Expected an @return tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="12" column="35" severity="error" message="Expected @param tag for &apos;fact&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="15" column="23" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="19" column="22" severity="error" message="&apos;*&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\Calculator.java">
 </file>
-<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\lesson_5\BubbleSort.java">
-<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-<error line="1" column="9" severity="error" message="Name &apos;lesson_5&apos; must match pattern &apos;^[a-z]+(\.[a-zA-Z_][a-zA-Z0-9_]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
-<error line="2" severity="error" message="First sentence should end with a period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
-<error line="11" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="12" severity="error" message="Expected an @return tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="12" column="43" severity="error" message="Expected @param tag for &apos;array&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\CheckLine.java">
 </file>
-<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\lesson_5\DeleteElementArray.java">
-<error line="1" column="9" severity="error" message="Name &apos;lesson_5&apos; must match pattern &apos;^[a-z]+(\.[a-zA-Z_][a-zA-Z0-9_]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
-<error line="9" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="15" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="16" severity="error" message="Expected an @return tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="16" column="61" severity="error" message="Expected @param tag for &apos;strings&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="26" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="30" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="31" severity="error" message="Expected an @return tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="31" column="55" severity="error" message="Expected @param tag for &apos;strings&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="33" column="53" severity="error" message="&apos;;&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyForIteratorPadCheck"/>
-<error line="45" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="49" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="50" severity="error" message="Expected an @return tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="50" column="50" severity="error" message="Expected @param tag for &apos;strings&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\counter\Counter.java">
 </file>
-<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\lesson_5\Turn.java">
-<error line="1" column="9" severity="error" message="Name &apos;lesson_5&apos; must match pattern &apos;^[a-z]+(\.[a-zA-Z_][a-zA-Z0-9_]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
-<error line="7" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="13" severity="error" message="Expected an @return tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="13" column="37" severity="error" message="Expected @param tag for &apos;array&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\counter\package-info.java">
 </file>
-<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\lesson_5\TurnArray.java">
-<error line="1" column="9" severity="error" message="Name &apos;lesson_5&apos; must match pattern &apos;^[a-z]+(\.[a-zA-Z_][a-zA-Z0-9_]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
-<error line="4" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="10" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="11" column="38" severity="error" message="Expected @param tag for &apos;array&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\DeleteElementArray.java">
 </file>
-<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\lesson_6\CheckLine.java">
-<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-<error line="1" column="9" severity="error" message="Name &apos;lesson_6&apos; must match pattern &apos;^[a-z]+(\.[a-zA-Z_][a-zA-Z0-9_]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
-<error line="8" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="12" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="14" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="15" severity="error" message="Expected an @return tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="15" column="39" severity="error" message="Expected @param tag for &apos;strings&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="22" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="23" severity="error" message="Expected an @return tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="23" column="43" severity="error" message="Expected @param tag for &apos;ch&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="23" column="54" severity="error" message="Expected @param tag for &apos;p&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\factorial\Factorial.java">
 </file>
-<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\Calculate.java">
-<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-<error line="8" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="10" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="15" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="16" column="46" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\factorial\package-info.java">
 </file>
-<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\test\java\BubbleSortTest.java">
-<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-<error line="5" severity="error" message="First sentence should end with a period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
-<error line="9" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="10" column="4" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.t
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\max\Max.java">
+</file>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\max\package-info.java">
+</file>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\package-info.java">
+</file>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\Turn.java">
+</file>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\main\java\ru\job4j\TurnArray.java">
+</file>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\test\java\ru\job4j\BubbleSortTest.java">
+</file>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\test\java\ru\job4j\CalculateTest.java">
+</file>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\test\java\ru\job4j\CheckLineTest.java">
+</file>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\test\java\ru\job4j\CounterTest.java">
+</file>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\test\java\ru\job4j\DeleteElementArrayTest.java">
+</file>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\test\java\ru\job4j\FactorialTest.java">
+</file>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\test\java\ru\job4j\MaxTest.java">
+</file>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\test\java\ru\job4j\package-info.java">
+</file>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\test\java\ru\job4j\TurnArrayTest.java">
+</file>
+<file name="E:\Java programm\project\Alexandr_Smirnov\chapter_001\src\test\java\ru\job4j\TurnTest.java">
+</file>
+</checkstyle>
