@@ -7,11 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="chapter_001" />
+        <module name="tracker" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Alexandr_Smirnov" target="1.8" />
       <module name="chapter_001" target="1.8" />
+      <module name="chapter_002" target="1.8" />
+      <module name="chapter_002 (1)" target="1.5" />
+      <module name="Tracker" target="1.5" />
+      <module name="tracker" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
