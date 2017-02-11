@@ -7,19 +7,19 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 /**
-* Тест суммы интервала.
-*/
+ * Тест суммы интервала.
+ */
 public class CounterTest {
-	/**
-	* Тест метода вычисляющего сумму интервала.
-	*/
+    /**
+     * Тест метода вычисляющего сумму интервала.
+     */
     @Test
     public void countTest() {
-		int one = 1;
-		int two = 2;
-		final int three = 3;
-       Counter counter = new Counter();
-       int result = (int) counter.add(one, three);
-       assertThat(two, is(result));
+        final int one = 1;
+        final int two = 2;
+        final int three = 3;
+        Counter counter = new Counter();
+        int result = (int) counter.add(one, three);
+        assertThat(two, is(result));
     }
 }

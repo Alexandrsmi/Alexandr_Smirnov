@@ -4,8 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Alexandr_Smirnov.iml" filepath="$PROJECT_DIR$/Alexandr_Smirnov.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter_001/chapter_001.iml" filepath="$PROJECT_DIR$/chapter_001/chapter_001.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter_002/chapter_002.iml" filepath="$PROJECT_DIR$/chapter_002/chapter_002.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter_002/tracker/tracker.iml" filepath="$PROJECT_DIR$/chapter_002/tracker/tracker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chap_002/chess/chess.iml" filepath="$PROJECT_DIR$/chap_002/chess/chess.iml" />
+      <module fileurl="file://$PROJECT_DIR$/targ/targ.iml" filepath="$PROJECT_DIR$/targ/targ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chap_002/tracker/tracker.iml" filepath="$PROJECT_DIR$/chap_002/tracker/tracker.iml" />
     </modules>
   </component>
 </project>
