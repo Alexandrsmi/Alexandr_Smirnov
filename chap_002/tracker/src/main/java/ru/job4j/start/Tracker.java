@@ -130,15 +130,14 @@ public class Tracker {
      * @param item - entering object.
      * @return items - iterated array Item.
      */
-    public Item deleteItem(Item item) {
-        Item delete = findById(item.getId());
+    public Item[] deleteItem(Item item) {
         for (int index = 0; index < this.items.length; index++) {
-            if (this.items[index].getId().equals(delete.getId())) {
+            if (this.items[index].getId().equals(item.getId())) {
                 this.items[index] = null;
                 break;
             }
         }
-        return delete;
+        return items;
     }
 
     /**

@@ -2,11 +2,9 @@ package ru.job4j.start;
 
 import ru.job4j.models.*;
 
-/**
- * Class
- *
+/*
  * @author Aleksandr Smirnov.
- * @vesion
+ * @version 1.
  * @since 01.02.2017.
  */
 
