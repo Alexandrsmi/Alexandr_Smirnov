@@ -33,7 +33,6 @@ public class StartUI {
                 String id = input.ask("Please enter the task's id: ");
                 Item item = new Item(id);
                 tracker.deleteItem(item);
-                tracker.sortNullTheElementsArray();
             }
 
             @Override

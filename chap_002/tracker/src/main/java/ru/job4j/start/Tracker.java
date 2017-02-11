@@ -131,32 +131,19 @@ public class Tracker {
      * @return items - iterated array Item.
      */
     public Item[] deleteItem(Item item) {
-        for (int index = 0; index < this.items.length; index++) {
-            if (this.items[index].getId().equals(item.getId())) {
-                this.items[index] = null;
-                break;
-            }
-        }
-        return items;
-    }
 
-    /**
-     * Метод переносит null объект в конец массива.
-     *
-     * @return items - iterated array.
-     */
-    public Item[] sortNullTheElementsArray() {
-        int count = 0;
-        for (int i = position; i < count; ) {
-            if (items[count] == null) {
-                Item temp;
-                temp = items[i];
-                items[i] = items[count];
-                items[count] = temp;
-                i--;
+        for (int index = 0; index < position; index++) {
+            if (this.items[index].getId().equals(item.getId())) {
+                for (int j = index; j < position - 1; j++) {
+                    Item temp;
+                    temp = items[j];
+                    this.items[j] = this.items[j + 1];
+                    this.items[j + 1] = temp;
+                }
             }
-            count++;
         }
+        position--;
+        this.items[position] = null;
         return items;
     }
 }
