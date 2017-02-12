@@ -17,13 +17,18 @@ public class Item {
     private String comment;
     public String dateCreate;
 
-
     public Item(String name, String description) {
         this.name = name;
         this.description = description;
     }
 
     public Item() {
+    }
+
+    public Item(String name, String description, String dateCreate) {
+        this.name = name;
+        this.description = description;
+        this.dateCreate = dateCreate;
     }
 
     public void setDescription(String description) {
@@ -36,14 +41,6 @@ public class Item {
 
     public void setComment(String comment) {
         this.comment = comment;
-    }
-
-
-
-    public Item(String name, String description, String dateCreate) {
-        this.name = name;
-        this.description = description;
-        this.dateCreate = dateCreate;
     }
 
     public void setName(String name) {

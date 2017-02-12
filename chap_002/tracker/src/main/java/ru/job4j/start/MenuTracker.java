@@ -70,7 +70,7 @@ public class MenuTracker {
         public void execute(Input input, Tracker tracker) {
             String name = input.ask("Please enter the task's name: ");
             String desc = input.ask("Please enter the task's desc: ");
-            tracker.getAddItem(new Task(name, desc));
+            tracker.addItem(new Task(name, desc));
         }
     }
 

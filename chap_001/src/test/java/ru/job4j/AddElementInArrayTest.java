@@ -8,7 +8,7 @@ import static org.junit.Assert.assertThat;
 /**
  * Class testing AddElementInArray.
  * @author Aleksandr Smirnov.
- * @vesion 1.0.
+ * @version 1.0.
  * @since 05.02.2017.
  */
 public class AddElementInArrayTest {
@@ -16,7 +16,7 @@ public class AddElementInArrayTest {
      * test addElementInArray.
      */
     @Test
-    public void addElementInArrayTest(){
+    public void addElementInArrayTest() {
         final int one = 1;
         final int two = 2;
         final int three = 3;
@@ -26,10 +26,10 @@ public class AddElementInArrayTest {
         final int nine = 9;
         final int five = 5;
         AddElementInArray addElementArray = new AddElementInArray();
-        int[] array = new int[]{one,two,three,four,five,six,seven,nine,one,two};
+        int[] array = new int[]{one, two, three, four, five, six, seven, nine, one, two};
         int element = seven;
-        int[] result = addElementArray.addElementInArray(array,element);
-        int[] arrayTest = new int[]{one,two,three,four,five,six,seven,nine,one,two,seven};
-        assertThat(arrayTest,is(result));
+        int[] result = addElementArray.addElementInArray(array, element);
+        int[] arrayTest = new int[]{one, two, three, four, five, six, seven, nine, one, two, seven};
+        assertThat(arrayTest, is(result));
     }
 }

@@ -9,7 +9,7 @@ import static org.junit.Assert.assertThat;
  * Class testing CheckSortArrayOrNoSort.
  *
  * @author Aleksandr Smirnov.
- * @vesion 1.0.
+ * @version 1.0.
  * @since 05.02.2017.
  */
 public class CheckSortArrayOrNotSortTest {
