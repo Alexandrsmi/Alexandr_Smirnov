@@ -1,14 +1,9 @@
 package ru.job4j;
 
 import org.junit.Test;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -17,8 +12,10 @@ import static org.junit.Assert.assertEquals;
  * @since 11.02.2017.
  */
 public class DropAbuseTest {
-    private static final Logger LOGGER = LoggerFactory.getLogger(DropAbuseTest.class);
-
+    /**
+     * Тест метода удаляющего запрещенные слова.
+     * @throws IOException - отлавиваем ошибки I/O.
+     */
     @Test
     public void getDropAbuseTest() throws IOException {
         DropAbuse dropAbuse = new DropAbuse();
@@ -27,7 +24,6 @@ public class DropAbuseTest {
         final String testString = "12'0o, clocks";
         final String expectedResult = "12'o clock";
         dropAbuse.getDropAbuse(new ByteArrayInputStream(testString.getBytes()), byteArrayOutputStream, abuse);
-        LOGGER.info(String.format("Expected: %s, Result %s",expectedResult, byteArrayOutputStream.toString()));
         assertEquals(expectedResult, byteArrayOutputStream.toString());
     }
 }

@@ -3,11 +3,17 @@ package ru.job4j;
 import org.junit.Test;
 import ru.job4j.models.Item;
 import ru.job4j.start.Tracker;
+
+import static junit.framework.TestCase.assertTrue;
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertThat;
+
 
 /**
  * Класс тестирующий методы класса Tracker.
+ *
  * @author Aleksandr Smirnov.
  * @version 1.
  * @since 04.02.2017.
@@ -49,7 +55,7 @@ public class TrackerTest {
     }
 
     /**
-     * Тест поиска
+     * Тест поиска объекта по полю id.
      */
     @Test
     public void findByIdTest() {
@@ -77,7 +83,7 @@ public class TrackerTest {
     }
 
     /**
-     * Метод тестирует добавление комментрариевю
+     * Метод тестирует добавление комментрариев.
      */
     @Test
     public void createCommentTest() {
@@ -109,7 +115,7 @@ public class TrackerTest {
      * Метод тестирует удаление элемента.
      */
     @Test
-    public void DeleteById() {
+    public void deleteByIdTest() {
         Item[] items;
         Item item = new Item("name", "desc");
         Item item1 = new Item("name1", "desc1");

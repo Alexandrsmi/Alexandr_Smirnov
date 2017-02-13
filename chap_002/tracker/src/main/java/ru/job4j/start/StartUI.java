@@ -4,10 +4,8 @@ import ru.job4j.models.*;
 
 
 /**
- * Class
- *
  * @author Aleksandr Smirnov.
- * @vesion
+ * @version 1.
  * @since 25.01.2017.
  */
 public class StartUI {

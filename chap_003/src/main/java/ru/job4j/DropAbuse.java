@@ -9,6 +9,15 @@ import java.util.Scanner;
  * @since 11.02.2017.
  */
 public class DropAbuse {
+    public static void main(String[] args) throws IOException {
+        DropAbuse dropAbuse = new DropAbuse();
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        final String[] abuse = new String[]{"0", ",", "s"};
+        String string = "dadaw0fa,ssss$";
+        dropAbuse.getDropAbuse(new ByteArrayInputStream(string.getBytes()), byteArrayOutputStream, abuse);
+
+    }
+
 
     public void getDropAbuse(InputStream inputStream, OutputStream outputStream, String[] abuse) throws IOException {
 

@@ -1,13 +1,18 @@
 package ru.job4j.start;
 
 /**
- * Class
- *
+ * Класс отлавливающий ошибки.
  * @author Aleksandr Smirnov.
- * @vesion
+ * @version 1.
  * @since 02.02.2017.
  */
 public class ValidateInput extends ConsoleInput {
+    /**
+     * Метод отлавливающий ошибки.
+     * @param question
+     * @param range
+     * @return
+     */
     public int ask(String question, int[] range) {
         boolean invalid = true;
         int value = -1;
