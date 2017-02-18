@@ -10,7 +10,6 @@ package ru.job4j;
 public class TwoArraySort {
     /**
      * Метод объединяющий два отсортированных массива.
-     *
      * @param array    - first array
      * @param arrayTwo - second array
      * @return arr - iterated array
@@ -18,20 +17,28 @@ public class TwoArraySort {
     public int[] sortTwoArrays(int[] array, int[] arrayTwo) {
         final int size = array.length + arrayTwo.length;
         int[] arr = new int[size];
-        for (int b = 0; b < arr.length;) {
-            for (int i = 0; i < array.length;) {
-                for (int j = 0; j < arrayTwo.length;) {
-                    if (i < array.length && array[i] < arrayTwo[j]) {
-                        arr[b] = array[i];
-                        b++;
-                        i++;
-                    } else {
-                        arr[b] = arrayTwo[j];
-                        b++;
-                        j++;
-                    }
-                }
+        int j = 0, k = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (j >= array.length) {
+                arr[i] = arrayTwo[k];
+                k++;
+            } else if (k >= arrayTwo.length) {
+                arr[i] = array[j];
+                j++;
+            } else if (array[j] < arrayTwo[k]) {
+                arr[i] = array[j];
+                j++;
+            } else if (array[j] > arrayTwo[k]) {
+                arr[i] = arrayTwo[k];
+                k++;
+            } else if (array[j] == arrayTwo[k]) {
+                arr[i] = array[j];
+                arr[i + 1] = arrayTwo[k];
+                i++;
+                j++;
+                k++;
             }
+
         }
         return arr;
     }
