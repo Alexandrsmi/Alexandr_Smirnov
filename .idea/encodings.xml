@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/chap_001" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chap_002" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chap_002/chess" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap_002/chess/src/main/java/ru/job4j/model/StartUI.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chap_002/tracker" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chap_003" charset="UTF-8" />
   </component>

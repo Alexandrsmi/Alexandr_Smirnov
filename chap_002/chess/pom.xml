@@ -3,6 +3,29 @@
 	<groupId>ru.job4j.chess</groupId>
     <artifactId>chess</artifactId>
     <version>2.0</version>
+    <dependencies>
+        <dependency>
+            <groupId>net.sourceforge.saxon</groupId>
+            <artifactId>saxon</artifactId>
+            <version>9.1.0.8</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-xjc</artifactId>
+            <version>2.2.11</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-xjc</artifactId>
+            <version>2.2.7</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ru.yandex.qatools.allure</groupId>
+            <artifactId>allure-model</artifactId>
+            <version>1.5.0</version>
+        </dependency>
+    </dependencies>
     <packaging>jar</packaging>
 	
     <parent>
