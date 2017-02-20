@@ -1,4 +1,4 @@
-package ru.job4j.model;
+package ru.job4j;
 
 import ru.job4j.figure.Figure;
 
@@ -53,12 +53,12 @@ public class Board {
     }
 
     /**
-     * Метод проверяет возмоность хода по диагонали.
+     * Метод проверяет возмоность хода по вертикали и горизонтали.
      * @param figure - фигура которой хотим походить.
      * @param position - кординаты на которые хотим походить.
      * @return - false - путь занят , true - путь свободен.
      */
-    public boolean pathOnDiagonally(Figure figure, Position position) {
+    public boolean pathOnFileOnChessboardAndHorizontal(Figure figure, Position position) {
         if (figure.getPosition().getX() != position.getX() &&
                 position.getX() < figures.length && position.getX() >= 0) {
             int j = position.getY();

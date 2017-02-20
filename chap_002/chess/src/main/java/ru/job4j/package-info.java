@@ -3,4 +3,4 @@
  * @version 1
  * @since 19.02.2017.
  */
-package ru.job4j.model;
+package ru.job4j;

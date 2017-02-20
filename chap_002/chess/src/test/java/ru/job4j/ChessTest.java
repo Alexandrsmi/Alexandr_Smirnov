@@ -3,10 +3,6 @@ package ru.job4j;
 import org.junit.Assert;
 import org.junit.Test;
 import ru.job4j.figure.Bishop;
-import ru.job4j.model.Board;
-import ru.job4j.model.ColorFigure;
-import ru.job4j.model.FigureType;
-import ru.job4j.model.Position;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -75,10 +71,10 @@ public class ChessTest {
     }
 
     /**
-     * Тест провровеки озможности хода по диагонали.
+     * Тест провровеки возможности хода по вертикали и горизонтали.
      */
     @Test
-    public void pathOnDiagonallyTest() {
+    public void pathOnFileOnChessboardAndHorizontalTest() {
         Board board = new Board();
         final Position position = new Position(3, 3);
         final Position positionTwoFirgure = new Position(5, 3);
@@ -86,7 +82,7 @@ public class ChessTest {
         final Position testPositionTrue = new Position(4, 3);
         board.addFigure(new Bishop(position, ColorFigure.WHITE, FigureType.BISHOP));
         board.addFigure(new Bishop(positionTwoFirgure, ColorFigure.WHITE, FigureType.BISHOP));
-        Assert.assertFalse(board.pathOnDiagonally(board.getFigure(position), testPositionFalse));
-        Assert.assertTrue(board.pathOnDiagonally(board.getFigure(position), testPositionTrue));
+        Assert.assertFalse(board.pathOnFileOnChessboardAndHorizontal(board.getFigure(position), testPositionFalse));
+        Assert.assertTrue(board.pathOnFileOnChessboardAndHorizontal(board.getFigure(position), testPositionTrue));
     }
 }

@@ -1,6 +1,6 @@
 package ru.job4j.input;
 
-import ru.job4j.model.Position;
+import ru.job4j.Position;
 
 import java.util.Arrays;
 import java.util.Scanner;

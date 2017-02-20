@@ -1,9 +1,8 @@
 package ru.job4j.figure;
 
-import ru.job4j.figure.Figure;
-import ru.job4j.model.ColorFigure;
-import ru.job4j.model.FigureType;
-import ru.job4j.model.Position;
+import ru.job4j.ColorFigure;
+import ru.job4j.FigureType;
+import ru.job4j.Position;
 
 /**
  * Класс фигуры Bishop.
