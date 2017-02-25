@@ -6,10 +6,7 @@ import ru.job4j.Position;
 
 /**
  * Класс фигуры Bishop.
- *
  * @author Aleksandr Smirnov.
- * @version 1
- * @since 19.02.2017.
  */
 public class Bishop extends Figure {
     /**
