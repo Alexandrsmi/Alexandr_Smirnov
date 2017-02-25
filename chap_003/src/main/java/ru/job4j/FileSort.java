@@ -21,6 +21,11 @@ public class FileSort {
      * Разделитель строк
      */
     private final String separator = System.getProperty("line.separator");
+
+    public static void main(String[] args) {
+        FileSort fileSort = new FileSort();
+        fileSort.sort(fileSort.sour,fileSort.dist);
+    }
     /**
      * Главный метод сортировки.
      * @param source   - файл для сортировки.
