@@ -1,9 +1,11 @@
 package ru.job4j;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import sun.plugin2.os.windows.SECURITY_ATTRIBUTES;
+
+import java.io.*;
+import java.security.PrivateKey;
+import java.util.Properties;
+import java.util.Set;
 
 /**
  * @author Aleksandr Smirnov.
@@ -12,22 +14,44 @@ public class FileSort {
     /**
      * Файл с неотсортированными строками.
      */
-    private File sour = new File("E:\\Java programm\\project\\Alexandr_Smirnov\\chap_003\\src\\main\\resources\\Sources");
+    private File sours;
     /**
      * Файл для хранения осортированных сторк.
      */
-    private File dist = new File("E:\\Java programm\\project\\Alexandr_Smirnov\\chap_003\\src\\main\\resources\\Distance");
+    private File distance;
+
     /**
-     * Разделитель строк
+     * Конструктор класса.
+     */
+    public FileSort() {
+        this.sours = sours;
+        this.distance = distance;
+    }
+
+    /**
+     * Разделитель строк.
      */
     private final String separator = System.getProperty("line.separator");
 
-    public static void main(String[] args) {
-        FileSort fileSort = new FileSort();
-        fileSort.sort(fileSort.sour,fileSort.dist);
+    /**
+     * Метод указывает путь к файлам.
+     *
+     * @throws Exception
+     */
+    public void pathFile() throws Exception {
+        FileInputStream fis;
+        Properties properties = new Properties();
+        fis = new FileInputStream("chap_003/src/main/resources/app.properties");
+        properties.load(fis);
+        String sour = properties.getProperty("sour.path");
+        String dis = properties.getProperty("dis.path");
+        sours = new File(sour);
+        distance = new File(dis);
     }
+
     /**
      * Главный метод сортировки.
+     *
      * @param source   - файл для сортировки.
      * @param distance - записываем отсортированные строки.
      */
@@ -35,8 +59,10 @@ public class FileSort {
         clearDistance(distance);
         mainSort(source, distance);
     }
+
     /**
      * Метод удаляет все данные в файле.
+     *
      * @param distance - файл с данными.
      */
     public void clearDistance(File distance) {
@@ -49,8 +75,10 @@ public class FileSort {
             e.printStackTrace();
         }
     }
+
     /**
      * Метод  разделяет файл на две части.
+     *
      * @param source   - файл с данными.
      * @param distance - пустой файл.
      */
@@ -80,19 +108,19 @@ public class FileSort {
             String[] str1 = sortArray(rowFileOne, firstFile);
             String[] str2 = sortArray(rowFileTwo, secondFile);
             getSortDistance(str1, str2, distance);
-            first.close();
-            firstFile.deleteOnExit();
-            second.close();
-            secondFile.deleteOnExit();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        firstFile.deleteOnExit();
+        secondFile.deleteOnExit();
     }
+
     /**
      * Метод дергает из файла строку и сохраняет её в String[] и сортирует получившийся массив.
-     * @param row - размер массива.
+     *
+     * @param row  - размер массива.
      * @param file - файл с данными.
      */
     public String[] sortArray(int row, File file) {
@@ -118,6 +146,7 @@ public class FileSort {
 
     /**
      * Метод формирует отсортированный файл.
+     *
      * @param oneArray - первый отсортированный массив.
      * @param twoArray - второй отсортированный массив.
      * @param distance - пустой файл.

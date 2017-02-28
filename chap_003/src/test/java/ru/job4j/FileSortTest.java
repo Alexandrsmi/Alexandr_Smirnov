@@ -24,12 +24,11 @@ public class FileSortTest {
     @Test
     public void clearDistance() {
         FileSort fileSort = new FileSort();
-        File file = new File("E:\\Java programm\\project\\Alexandr_Smirnov\\chap_003\\src\\main\\resources\\TestFile");
+        File file = new File("TestFile.txt");
         try (RandomAccessFile raf = new RandomAccessFile(file, "rw")) {
             raf.writeBytes("TeSt");
             raf.writeBytes(separator);
             raf.writeBytes("Test");
-            raf.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -50,7 +49,7 @@ public class FileSortTest {
         final int arraySize = 3;
         String[] expected = new String[]{"1", "22", "333"};
         String[] actual = null;
-        File file = new File("E:\\Java programm\\project\\Alexandr_Smirnov\\chap_003\\src\\main\\resources\\TestFile");
+        File file = new File("TestFile.txt");
         try (RandomAccessFile raf = new RandomAccessFile(file, "rw")) {
             raf.writeBytes("22");
             raf.writeBytes(separator);
@@ -80,7 +79,7 @@ public class FileSortTest {
         String[] strTwo = new String[]{"1", "22", "55555"};
         String[] actual = new String[6];
         String[] expected = new String[]{"1", "22", "333", "55555", "55555", "666666"};
-        File file = new File("E:\\Java programm\\project\\Alexandr_Smirnov\\chap_003\\src\\main\\resources\\TestFile");
+        File file = new File("TestFile.txt");
         try (RandomAccessFile raf = new RandomAccessFile(file, "rw")) {
             fileSort.getSortDistance(strOne, strTwo, file);
             raf.seek(0);
