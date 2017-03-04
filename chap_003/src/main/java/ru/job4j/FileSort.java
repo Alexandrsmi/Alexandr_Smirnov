@@ -29,7 +29,7 @@ public class FileSort {
     }
 
     /**
-     * Разделитель строк.
+     * Разделитель строк/
      */
     private final String separator = System.getProperty("line.separator");
 
@@ -39,12 +39,13 @@ public class FileSort {
      * @throws Exception
      */
     public void pathFile() throws Exception {
-        FileInputStream fis;
-        Properties properties = new Properties();
-        fis = new FileInputStream("chap_003/src/main/resources/app.properties");
-        properties.load(fis);
-        String sour = properties.getProperty("sour.path");
-        String dis = properties.getProperty("dis.path");
+        Setting setting = new Setting();
+        ClassLoader classLoader = Setting.class.getClassLoader();
+        try (InputStream io = classLoader.getResourceAsStream("app.properties")) {
+            setting.load(io);
+        }
+        String sour = setting.getValue("sour.path");
+        String dis = setting.getValue("dis.path");
         sours = new File(sour);
         distance = new File(dis);
     }

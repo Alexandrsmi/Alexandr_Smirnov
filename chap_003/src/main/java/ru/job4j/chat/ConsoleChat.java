@@ -1,6 +1,6 @@
 package ru.job4j.chat;
 
-import ru.job4j.FileSort;
+import ru.job4j.*;
 import ru.job4j.chat.command.*;
 
 import java.io.*;
@@ -19,6 +19,18 @@ public class ConsoleChat {
      * Файл с фразами.
      */
     private File phrase;
+    /**
+     * Ключ для команды stop.
+     */
+    private static final String STOP_KEY = "stop";
+    /**
+     * Ключь для команды start.
+     */
+    private static final String START_KEY = "start";
+    /**
+     * Ключь для команды  exit.
+     */
+    private static final String EXIT_KEY = "exit";
 
     /**
      * Конструктор класса.
@@ -30,31 +42,25 @@ public class ConsoleChat {
 
     /**
      * Метод доступа к файлам.
+     *
      * @throws Exception
      */
     public void pathFile() throws Exception {
-        FileInputStream fis;
-        Properties properties = new Properties();
-
-        fis = new FileInputStream("chap_003/src/main/resources/app.properties");
-        properties.load(fis);
-
-        String logPath = properties.getProperty("log.path");
-        String phrasePath = properties.getProperty("phrase.path");
-        log = new File(logPath);
-        phrase = new File(phrasePath);
-
+        ru.job4j.Setting setting = new ru.job4j.Setting();
+        ClassLoader classLoader = ru.job4j.Setting.class.getClassLoader();
+        try (InputStream io = classLoader.getResourceAsStream("app.properties")) {
+            setting.load(io);
+        }
+        String filePhrases = setting.getValue("phrase.path");
+        String fileLog = setting.getValue("log.path");
+        phrase = new File(filePhrases);
+        log = new File(fileLog);
     }
 
-    public static void main(String[] args) throws  Exception{
-        ConsoleChat consoleChat = new ConsoleChat();
-        consoleChat.pathFile();
-        consoleChat.start();
-    }
     /**
      * Метод отвечает за работу консольного чата.
      */
-    public void start()throws Exception {
+    public void start() throws Exception {
         Scanner sc = new Scanner(System.in);
         Command command = null;
         CommandFactory commandFactory = new CommandFactory();
@@ -63,19 +69,19 @@ public class ConsoleChat {
         do {
             String commandName = sc.next();
             String str = getPhrase(phrase, generationRandomIntValues(numbersOfLines(phrase)));
-            if (commandName.equals("stop")) {
+            if (commandName.equals(STOP_KEY)) {
                 manipulationWithFile(commandName, log);
                 command = commandFactory.getCommand(commandName);
-                while (!commandName.equals("start")) {
+                while (!commandName.equals(START_KEY)) {
                     commandName = sc.next();
                     manipulationWithFile(commandName, log);
                 }
                 continue outer;
-            } else if (commandName.equals("exit")) {
+            } else if (commandName.equals(EXIT_KEY)) {
                 command = commandFactory.getCommand(commandName);
                 manipulationWithFile(commandName, log);
             }
-            if (!commandName.equals("exit")) {
+            if (!commandName.equals(EXIT_KEY)) {
                 System.out.println(str);
                 manipulationWithFile(commandName, str, log);
             }
@@ -163,9 +169,11 @@ public class ConsoleChat {
         final String separator = System.getProperty("line.separator");
         try (RandomAccessFile raf = new RandomAccessFile(file, "rw");) {
             raf.seek(raf.length());
-            raf.writeBytes("User" + " " + "-" + " " + str);
+            raf.writeBytes("User - ");
+            raf.writeBytes(str);
             raf.writeBytes(separator);
-            raf.writeBytes("PC" + " " + "-" + " " + string1);
+            raf.writeBytes("PC - ");
+            raf.writeBytes(string1);
             raf.writeBytes(separator);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -184,7 +192,8 @@ public class ConsoleChat {
         final String separator = System.getProperty("line.separator");
         try (RandomAccessFile raf = new RandomAccessFile(file, "rw");) {
             raf.seek(raf.length());
-            raf.writeBytes("User" + " " + "-" + " " + str);
+            raf.writeBytes("User - ");
+            raf.writeBytes(str);
             raf.writeBytes(separator);
         } catch (FileNotFoundException e) {
             e.printStackTrace();

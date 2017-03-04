@@ -58,7 +58,6 @@ public class FileSortTest {
             raf.writeBytes("333");
             raf.writeBytes(separator);
             actual = fileSort.sortArray(arraySize, file);
-            raf.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -86,7 +85,6 @@ public class FileSortTest {
             for (int i = 0; i < actual.length; i++) {
                 actual[i] = raf.readLine();
             }
-            raf.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
