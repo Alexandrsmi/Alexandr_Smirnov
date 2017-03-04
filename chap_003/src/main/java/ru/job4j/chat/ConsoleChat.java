@@ -69,19 +69,19 @@ public class ConsoleChat {
         do {
             String commandName = sc.next();
             String str = getPhrase(phrase, generationRandomIntValues(numbersOfLines(phrase)));
-            if (commandName.equals(STOP_KEY)) {
+            if (STOP_KEY != null && commandName.equals(STOP_KEY)) {
                 manipulationWithFile(commandName, log);
                 command = commandFactory.getCommand(commandName);
-                while (!commandName.equals(START_KEY)) {
+                while (START_KEY != null && !commandName.equals(START_KEY)) {
                     commandName = sc.next();
                     manipulationWithFile(commandName, log);
                 }
                 continue outer;
-            } else if (commandName.equals(EXIT_KEY)) {
+            } else if (EXIT_KEY != null && commandName.equals(EXIT_KEY)) {
                 command = commandFactory.getCommand(commandName);
                 manipulationWithFile(commandName, log);
             }
-            if (!commandName.equals(EXIT_KEY)) {
+            if (EXIT_KEY != null && !commandName.equals(EXIT_KEY)) {
                 System.out.println(str);
                 manipulationWithFile(commandName, str, log);
             }
