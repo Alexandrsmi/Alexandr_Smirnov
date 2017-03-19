@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class StartCommand extends NotFinishCommand {
     @Override
     public String getName() {
-        return "start";
+        return "startClient";
     }
 
     @Override

@@ -33,6 +33,10 @@ public class FileSort {
      */
     private final String separator = System.getProperty("line.separator");
 
+    public static void main(String[] args)throws Exception {
+        FileSort fileSort = new FileSort();
+        fileSort.pathFile();
+    }
     /**
      * Метод указывает путь к файлам.
      *
@@ -48,6 +52,7 @@ public class FileSort {
         String dis = setting.getValue("dis.path");
         sours = new File(sour);
         distance = new File(dis);
+        System.out.println(sours.getAbsolutePath());
     }
 
     /**

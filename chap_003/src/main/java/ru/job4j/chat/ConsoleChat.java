@@ -24,9 +24,9 @@ public class ConsoleChat {
      */
     private static final String STOP_KEY = "stop";
     /**
-     * Ключь для команды start.
+     * Ключь для команды startClient.
      */
-    private static final String START_KEY = "start";
+    private static final String START_KEY = "startClient";
     /**
      * Ключь для команды  exit.
      */
@@ -87,7 +87,6 @@ public class ConsoleChat {
             }
         } while (command == null || !command.isFinish());
     }
-
     /**
      * Класс содержит команды.
      */
