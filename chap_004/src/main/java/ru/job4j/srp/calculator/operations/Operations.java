@@ -31,5 +31,4 @@ public abstract class Operations {
     }
 
     public abstract double execute(double... argument);
-
 }
