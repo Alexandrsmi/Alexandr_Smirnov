@@ -47,7 +47,7 @@ public class Server {
             Action action = new Action();
             while (true) {
                 line = in.readUTF();
-                if (line.equals(EXIT_KEY)) {
+                if (EXIT_KEY != null && line.equals(EXIT_KEY)) {
                     socket.close();
                     System.out.printf("Last command - " + line);
                     System.out.println("Could not close socket");
