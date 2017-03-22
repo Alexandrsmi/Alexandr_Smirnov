@@ -10,10 +10,26 @@ import java.util.Scanner;
  * @author Aleksandr Smirnov.
  */
 public class InputConsole implements Input {
-
+    /**
+     * Ключ продолжения.
+     */
     private static final String CONTINUE_KEY = "y";
+    /**
+     * Ключ выхода.
+     */
     private static final String END_KEY = "n";
-
+    /**
+     * Сообщение перед вводом числа.
+     */
+    private static final String ENTER_NUMBER = "Enter number ";
+    /**
+     * Сообщение перед вводом операции.
+     */
+    private static final String ENTER_OPERATION = "Enter operation ";
+    /**
+     * Сообщение при некорректном вводе.
+     */
+    private static final String INCOMPLETE_INPUT = "Incomplete input";
     /**
      * Используем Scanner  для получения данных.
      */
@@ -28,10 +44,10 @@ public class InputConsole implements Input {
     public double writeArgument() {
         double result = 0.0;
         try {
-            System.out.printf("Enter number" + " ");
-            result = Double.valueOf(scanner.next());
-        } catch (InputMismatchException ime) {
-            System.out.println("Incomplete input");
+            System.out.printf(ENTER_NUMBER);
+            result = Double.valueOf(scanner.next().trim());
+        } catch (NumberFormatException nfe) {
+            System.out.println(INCOMPLETE_INPUT);
             writeArgument();
         }
         return result;
@@ -47,10 +63,10 @@ public class InputConsole implements Input {
         OperationsFactory operationsFactory = new OperationsFactory();
         Operations operation = null;
         while (operation == null) {
-            System.out.print("Enter operation ");
-            operation = operationsFactory.getOperation(scanner.next());
+            System.out.print(ENTER_OPERATION);
+            operation = operationsFactory.getOperation(scanner.next().trim());
             if (operation == null) {
-                System.out.println("Incomplete input ");
+                System.out.println(INCOMPLETE_INPUT);
             }
         }
         return operation;
@@ -66,13 +82,13 @@ public class InputConsole implements Input {
         String selectionOfAction;
         do {
             System.out.println("Желаете продолжить: y/n");
-            selectionOfAction = scanner.next();
+            selectionOfAction = scanner.next().trim();
             if (selectionOfAction.equals(END_KEY)) {
                 return false;
             } else if (selectionOfAction.equals(CONTINUE_KEY)) {
                 return true;
             }
-            System.out.println("Incorrect input");
+            System.out.println(INCOMPLETE_INPUT);
         } while (!selectionOfAction.equals(END_KEY) || !selectionOfAction.equals(CONTINUE_KEY));
         return false;
     }

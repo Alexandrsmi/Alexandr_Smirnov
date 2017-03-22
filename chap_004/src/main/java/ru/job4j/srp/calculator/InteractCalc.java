@@ -39,7 +39,6 @@ public class InteractCalc {
         this.input = new InputConsole();
         this.operationsFactory = new OperationsFactory();
     }
-
     /**
      * Метод запускает программу.
      */
