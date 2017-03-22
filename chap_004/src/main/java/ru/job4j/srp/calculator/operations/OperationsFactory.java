@@ -25,7 +25,7 @@ public class OperationsFactory {
      * @param operationName - ключь операции.
      * @return operation - операция.
      */
-    public Operations getOperation(String operationName) {
+    public Operations getOperation(String operationName){
         for (Operations operation : operations) {
             if (operationName.equals(operation.getKey())) {
                 return operation;

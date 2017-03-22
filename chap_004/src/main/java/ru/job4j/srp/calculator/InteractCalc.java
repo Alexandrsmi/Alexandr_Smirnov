@@ -17,8 +17,14 @@ public class InteractCalc {
      */
     private double result;
     /**
-     *
+     * Ключ выхода из программы.
      */
+    private static final String EXIT_KEY = "exit";
+    /**
+     * Ключ операции =.
+     */
+    private static final String EQUALLY_KEY = "=";
+
     private final Output output;
     private final Input input;
     private final OperationsFactory operationsFactory;
@@ -32,7 +38,6 @@ public class InteractCalc {
         this.output = new OutputConsole();
         this.input = new InputConsole();
         this.operationsFactory = new OperationsFactory();
-        this.operation = null;
     }
 
     /**
@@ -43,13 +48,12 @@ public class InteractCalc {
         InteractCalc interactCalc = new InteractCalc();
         interactCalc.humanSystemInterface();
     }
-
     /**
      * Метод взаимодействует спользователем.
      */
     public void humanSystemInterface() {
         double firstArgument = input.writeArgument();
-        Operations operation = input.writeOperation();
+        operation = input.writeOperation();
         do {
             // условие для операций с двумя атрибутами.
             if (operation.getQuantityArgument() == false) {
@@ -60,7 +64,7 @@ public class InteractCalc {
                 result = operation.execute(firstArgument, secondArgument);
                 operation = input.writeOperation();
             }
-            if (operation.getKey().equals("=")) {
+            if (operation.getKey().equals(EQUALLY_KEY)) {
                 output.writeResult(result);
                 if (input.writeCloseOrContinue()) {
                     firstArgument = input.writeArgument();
@@ -68,14 +72,14 @@ public class InteractCalc {
                 } else {
                     break;
                 }
-            } else if (!operation.getKey().equals("exit")) {
+            } else if (!operation.getKey().equals(EXIT_KEY)) {
                 output.writeResult(result);
                 firstArgument = result;
             } else {
                 output.writeResult(result);
             }
         }
-        while (!operation.getKey().equals("exit"));
+        while (!operation.getKey().equals(EXIT_KEY));
     }
     public double getResult() {
         return result;
