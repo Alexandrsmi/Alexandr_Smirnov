@@ -19,7 +19,7 @@ public class PowOperation extends Operations {
     /**
      * Информация по операции.
      */
-    private static final String INFO = "Корень - '" + OPERATION_KEY + "'";
+    private static final String INFO = "Возведение в степень - '" + OPERATION_KEY + "'";
     /**
      * Конструктор по умолчанию.
      */

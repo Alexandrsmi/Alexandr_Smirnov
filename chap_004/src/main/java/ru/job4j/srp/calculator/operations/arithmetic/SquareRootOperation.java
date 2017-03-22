@@ -11,7 +11,7 @@ public class SquareRootOperation extends Operations {
      * true- два атрибута.
      * false - один атрибут.
      */
-    private static final boolean QUANTITY_ARGUMENT = true;
+    private static final boolean QUANTITY_ARGUMENT = false;
     /**
      * Ключь операции.
      */
@@ -19,7 +19,7 @@ public class SquareRootOperation extends Operations {
     /**
      * Информация по операции.
      */
-    private static final String INFO = "Квадратный корень - '" + OPERATION_KEY + "'";
+    private static final String INFO = "Кубический корень - '" + OPERATION_KEY + "'";
     /**
      * Конструктор по умолчанию.
      */
