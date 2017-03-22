@@ -1,10 +1,8 @@
 package ru.job4j.file.manager.operations;
 
-import com.sun.corba.se.spi.orb.OperationFactory;
 import ru.job4j.file.manager.Manager;
 
 import java.io.File;
-
 /**
  * @author Aleksandr Smirnov.
  */

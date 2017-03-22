@@ -8,7 +8,9 @@ import java.net.Socket;
  * @author Aleksandr Smirnov.
  */
 public class Client {
-    public static void main(String[] args) throws Exception {
+
+
+    public void  startClient() throws Exception {
        final int port = 7000;
        final String address = "127.0.0.1";
         InetAddress inetAddress = InetAddress.getByName(address);

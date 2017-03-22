@@ -62,10 +62,10 @@ public class InteractCalc {
             }
             if (operation.getKey().equals("=")) {
                 output.writeResult(result);
-                if(input.writeCloseOrContinue()) {
+                if (input.writeCloseOrContinue()) {
                     firstArgument = input.writeArgument();
                     operation = input.writeOperation();
-                }else{
+                } else {
                     break;
                 }
             } else if (!operation.getKey().equals("exit")) {
@@ -77,7 +77,6 @@ public class InteractCalc {
         }
         while (!operation.getKey().equals("exit"));
     }
-
     public double getResult() {
         return result;
     }

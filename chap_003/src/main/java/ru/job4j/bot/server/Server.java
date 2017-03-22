@@ -11,7 +11,7 @@ import java.net.Socket;
  * @author Aleksandr Smirnov.
  */
 public class Server {
-
+    private static final String EXIT_KEY = "exit";
     private File phrases;
 
     public Server() {
@@ -28,7 +28,7 @@ public class Server {
         phrases = new File(filePhrases);
     }
 
-    public static void main(String[] args) throws Exception {
+    public void startServer() throws Exception {
         Server server = new Server();
         final int port = 7000;
         try (ServerSocket serverSocket = new ServerSocket(port)) {
@@ -47,14 +47,14 @@ public class Server {
             Action action = new Action();
             while (true) {
                 line = in.readUTF();
-                if (line.equals("exit")) {
+                if (line.equals(EXIT_KEY)) {
                     socket.close();
-                    System.out.println("Last command - " + line);
+                    System.out.printf("Last command - " + line);
                     System.out.println("Could not close socket");
                     return;
                 }
                 line = action.getAnswer(server.phrases, line);
-                System.out.println("Client - " + line);
+                System.out.printf("Client - " + line);
                 out.writeUTF(line);
                 out.flush();
                 System.out.println("Waiting  for the next line ");
