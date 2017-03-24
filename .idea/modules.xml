@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/chap_001/chap_001.iml" filepath="$PROJECT_DIR$/chap_001/chap_001.iml" />
       <module fileurl="file://$PROJECT_DIR$/chap_003/chap_003.iml" filepath="$PROJECT_DIR$/chap_003/chap_003.iml" />
       <module fileurl="file://$PROJECT_DIR$/chap_004/chap_004.iml" filepath="$PROJECT_DIR$/chap_004/chap_004.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chap_005/chap_005.iml" filepath="$PROJECT_DIR$/chap_005/chap_005.iml" />
       <module fileurl="file://$PROJECT_DIR$/chap_002/chess/chess.iml" filepath="$PROJECT_DIR$/chap_002/chess/chess.iml" />
       <module fileurl="file://$PROJECT_DIR$/chap_002/tracker/tracker.iml" filepath="$PROJECT_DIR$/chap_002/tracker/tracker.iml" />
     </modules>

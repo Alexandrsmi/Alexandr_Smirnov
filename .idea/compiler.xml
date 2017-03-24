@@ -16,6 +16,12 @@
         <module name="models (1) (ru.smirnov.chapter_002.start)" />
         <module name="tracker" />
       </profile>
+      <profile name="Annotation profile for junior" enabled="true">
+        <sourceOutputDir name="../chap_004/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../chap_004/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="chap_005" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Alexandr_Smirnov" target="1.8" />
@@ -23,6 +29,7 @@
       <module name="chap_002" target="1.8" />
       <module name="chap_003" target="1.8" />
       <module name="chap_004" target="1.8" />
+      <module name="chap_005" target="1.8" />
       <module name="chapter_001" target="1.8" />
       <module name="chapter_002" target="1.8" />
       <module name="chapter_002 (1)" target="1.5" />

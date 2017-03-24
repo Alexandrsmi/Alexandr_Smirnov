@@ -19,7 +19,7 @@ public class SquareRootOperation extends Operations {
     /**
      * Информация по операции.
      */
-    private static final String INFO = "Кубический корень - '" + OPERATION_KEY + "'";
+    private static final String INFO = "Квадратный корень - '" + OPERATION_KEY + "'";
     /**
      * Конструктор по умолчанию.
      */
@@ -31,4 +31,5 @@ public class SquareRootOperation extends Operations {
     public double execute(double... argument) {
         return Math.cbrt(argument[0]);
     }
+
 }
