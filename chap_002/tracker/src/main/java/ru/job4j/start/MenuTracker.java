@@ -88,20 +88,9 @@ public class MenuTracker {
         @Override
         public void execute(Input input, Tracker tracker) {
             for (Item item : tracker.getAll()) {
-                if (item != null && item.getComment() != null) {
-                    System.out.println(
-                            String.format("%s, %s, %s, %s, %s", item.getId(), item.getName(),
-                                    item.getDescription(), item.getDateCreateItem(), item.getComment())
-                    );
-                } else if (item!=null){
-
-                    System.out.println(
-                            String.format("%s, %s, %s, %s", item.getId(), item.getName(),
-                                    item.getDescription(), item.getDateCreateItem())
-                    );
+                 System.out.println( item.toString());
                 }
             }
-        }
     }
 
     class EditItem extends BaseAction {
@@ -143,9 +132,7 @@ public class MenuTracker {
             Item item;
             item = tracker.findById(id);
             if (item != null) {
-                System.out.println(
-                        String.format("%s, %s, %s, %s", item.getId(), item.getName(),
-                                item.getDescription(), item.getDateCreateItem()));
+                System.out.printf(item.toString());
             } else {
                 System.out.println("File isn't find. Please enter correct name.");
             }
@@ -169,9 +156,7 @@ public class MenuTracker {
             Item item;
             item = tracker.findByName(name);
             if (item != null) {
-                System.out.println(
-                        String.format("%s, %s, %s, %s", item.getId(), item.getName(),
-                                item.getDescription(), item.getDateCreateItem()));
+                System.out.println(item.toString());
             } else {
                 System.out.println("File isn't find. Please enter correct name.");
             }
@@ -191,7 +176,7 @@ public class MenuTracker {
 
         @Override
         public void execute(Input input, Tracker tracker) {
-            String id = input.ask("Please enter the task's name: ");
+            String id = input.ask("Please enter the task's id: ");
             String comment = input.ask("Please enter comment");
             tracker.createComment(id, comment);
         }

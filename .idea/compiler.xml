@@ -9,18 +9,13 @@
         <module name="chap_001" />
         <module name="chap_003" />
         <module name="chap_004" />
+        <module name="chap_005" />
         <module name="chapter_001" />
         <module name="chess" />
         <module name="chess (1) (ru.job4j.chess)" />
         <module name="models" />
         <module name="models (1) (ru.smirnov.chapter_002.start)" />
         <module name="tracker" />
-      </profile>
-      <profile name="Annotation profile for junior" enabled="true">
-        <sourceOutputDir name="../chap_004/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../chap_004/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="chap_005" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

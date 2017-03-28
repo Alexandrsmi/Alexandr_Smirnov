@@ -9,6 +9,7 @@ import java.util.List;
 public class ConvertArrayList {
     /**
      * Метод получения лист из массива.
+     *
      * @param array
      * @return
      */
@@ -25,6 +26,7 @@ public class ConvertArrayList {
 
     /**
      * Метод получение массива из List.
+     *
      * @param list - коллекция.
      * @param rows - кол-во размер массива.
      * @return - массив.
@@ -34,11 +36,11 @@ public class ConvertArrayList {
         int temp = 0;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < rows; j++) {
-                if (temp<list.size()) {
+                if (temp < list.size()) {
                     array[i][j] = list.get(temp);
                     temp++;
                 } else {
-                   return array;
+                    return array;
                 }
             }
         }
@@ -55,11 +57,27 @@ public class ConvertArrayList {
     public int getRows(List<Integer> list) {
         int rows = list.size();
         do {
-                if (Math.sqrt(rows) % 1 == 0) {
-                    return (int) Math.sqrt(rows);
-                }
+            if (Math.sqrt(rows) % 1 == 0) {
+                return (int) Math.sqrt(rows);
+            }
             rows++;
         } while (rows % 1 == 0);
         return 0;
+    }
+
+    /**
+     * Метод переносит данные из List<int[]> в List<Integer>.
+     * @param list
+     * @return
+     */
+    public List<Integer> convert(List<int[]> list) {
+        List<Integer> result = new LinkedList<>();
+        for (int i = 0; i < list.size(); i++) {
+            int[] array = list.get(i);
+            for (Integer j:array) {
+                result.add(j);
+            }
+        }
+        return result;
     }
 }

@@ -15,7 +15,7 @@ public class Tracker {
     /**
      * items - массив хранящий все объекты Item.
      */
-    private Item[] items = new Item[100];
+    private List<Item> items = new ArrayList<>();
     /**
      * position - позиция элемента в массиве.
      */
@@ -27,26 +27,27 @@ public class Tracker {
 
     /**
      * Метод добавления элемента в массив объекта.
+     *
      * @param item - входящий объект массива.
      * @return item - добавленный объект.
      */
     public Item addItem(Item item) {
         item.setId(generateId());
-        this.items[position++] = item;
         Date date = new Date();
         item.setDateCreateItem(date);
+        items.add(item);
         return item;
     }
 
     /**
      * Метод изменнения полей элемента по id.
+     *
      * @param fresh - измененный объект.
      */
     public void edit(Item fresh) {
-        for (int index = 0; index != items.length; ++index) {
-            Item item = items[index];
-            if (item != null && item.getId().equals(fresh.getId())) {
-                items[index] = fresh;
+        for (Item item : items) {
+            if (item.getId().equals(fresh.getId())) {
+                item = fresh;
                 break;
             }
         }
@@ -54,6 +55,7 @@ public class Tracker {
 
     /**
      * Метод поиска объекта по полю id.
+     *
      * @param id - entering id object.
      * @return result - finding object.
      */
@@ -70,6 +72,7 @@ public class Tracker {
 
     /**
      * Метод поска объекта по полю name.
+     *
      * @param name - entering name.
      * @return result - finding object.
      */
@@ -86,12 +89,13 @@ public class Tracker {
 
     /**
      * Метод добавляющий комментарий к объекту.
+     *
      * @param id      - entering id object.
      * @param comment - entering comment.
      */
     public void createComment(String id, String comment) {
         for (Item it : items) {
-            if (it != null && it.getId().equals(id)) {
+            if (it.getId().equals(id)) {
                 it.setComment(comment);
             }
         }
@@ -99,6 +103,7 @@ public class Tracker {
 
     /**
      * Медот генерации случайного числа.
+     *
      * @return - случайное число String.
      */
     public String generateId() {
@@ -107,34 +112,26 @@ public class Tracker {
 
     /**
      * Метод для поиска всех объектов .
+     *
      * @return - возвращает массив объектов.
      */
-    public Item[] getAll() {
-        Item[] resault = new Item[this.position];
-        for (int index = 0; index != this.position; index++) {
-            resault[index] = this.items[index];
-        }
-        return resault;
+    public List<Item> getAll() {
+        return items;
     }
 
     /**
      * Метод присваивает значение null  найденному объекту.
+     *
      * @param item - entering object.
      * @return items - iterated array Item.
      */
-    public Item[] deleteItem(Item item) {
-        for (int index = 0; index < position; index++) {
-            if (this.items[index].getId().equals(item.getId())) {
-                for (int j = index; j < position - 1; j++) {
-                    Item temp;
-                    temp = items[j];
-                    this.items[j] = this.items[j + 1];
-                    this.items[j + 1] = temp;
-                }
+    public List<Item> deleteItem(Item item) {
+        for (Item a : items) {
+            if (a.getId().equals(item.getId())) {
+                items.remove(a);
+                return items;
             }
         }
-        position--;
-        this.items[position] = null;
         return items;
     }
 }

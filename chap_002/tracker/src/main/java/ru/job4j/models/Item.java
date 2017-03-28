@@ -77,4 +77,26 @@ public class Item {
         dateFormat.format(d);
         this.dateCreate = String.valueOf(dateCreat);
     }
+
+    @Override
+    public String toString() {
+        if (getComment() == null) {
+            return "[Item name: "
+                    + this.getName()
+                    + "], [Item descriptions: "
+                    + this.getDescription()
+                    + "], [Created Date: "
+                    + this.getDateCreateItem()
+                    + "], [id: " + this.getId() + "]";
+        }
+        return "[Item name: "
+                + this.getName()
+                + "], [Item descriptions: "
+                + this.getDescription()
+                + "], [Created Date: "
+                + this.getDateCreateItem()
+                + "], [Count comments: "
+                + this.getComment()
+                + "], [id: " + this.getId() + "]";
+    }
 }

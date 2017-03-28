@@ -5,6 +5,7 @@ import org.junit.Test;
 import ru.job4j.convert.ConvertArrayList;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import static org.hamcrest.core.Is.is;
@@ -12,7 +13,7 @@ import static org.junit.Assert.assertThat;
 
 
 /**
- * Unit test for simple App.
+ * @author Aleksandr Smirnov.
  */
 public class ConvertArrayListTest {
     @Test
@@ -60,5 +61,21 @@ public class ConvertArrayListTest {
         list.add(2);
         int actualRows = convertArrayList.getRows(list);
         Assert.assertTrue(expectedRows == actualRows);
+    }
+
+    @Test
+    public void convert() {
+        List<int[]> list = new ArrayList<>();
+        list.add(new int[]{1, 2});
+        list.add(new int[]{3, 4, 5});
+        List<Integer> expectedList = new LinkedList<>();
+        expectedList.add(1);
+        expectedList.add(2);
+        expectedList.add(3);
+        expectedList.add(4);
+        expectedList.add(5);
+        ConvertArrayList convertArrayList = new ConvertArrayList();
+        List<Integer> actualList = convertArrayList.convert(list);
+        assertThat(expectedList, is(actualList));
     }
 }

@@ -1,18 +1,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>chap_004</artifactId>
+    <artifactId>chap_005</artifactId>
     <version>2.0</version>
-    <dependencies>
-        <dependency>
-            <groupId>ru.job4j</groupId>
-            <artifactId>chap_005</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.10</version>
-        </dependency>
-    </dependencies>
     <packaging>jar</packaging>
     <parent>
         <groupId>ru.job4j</groupId>
