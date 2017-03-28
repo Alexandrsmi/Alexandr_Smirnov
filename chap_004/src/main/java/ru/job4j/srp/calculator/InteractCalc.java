@@ -33,18 +33,20 @@ public class InteractCalc {
     /**
      * Конструктор по умолчанию.
      */
-    public InteractCalc() {
+    public InteractCalc(final Output output, final Input input, final OperationsFactory operationsFactory) {
         this.result = result;
-        this.output = new OutputConsole();
-        this.input = new InputConsole();
-        this.operationsFactory = new OperationsFactory();
+        this.output = output;
+        this.input = input;
+        this.operationsFactory = operationsFactory;
     }
+
+
     /**
      * Метод запускает программу.
      */
     public void start() {
         output.helpInfo(operationsFactory.getOperationsArray());
-        InteractCalc interactCalc = new InteractCalc();
+        InteractCalc interactCalc = new InteractCalc(new OutputConsole(),new InputConsole(),new OperationsFactory());
         interactCalc.humanSystemInterface();
     }
     /**
