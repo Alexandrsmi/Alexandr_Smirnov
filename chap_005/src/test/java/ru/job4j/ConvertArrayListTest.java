@@ -16,6 +16,9 @@ import static org.junit.Assert.assertThat;
  * @author Aleksandr Smirnov.
  */
 public class ConvertArrayListTest {
+    /**
+     * Тест перевода из массива в коллекцию.
+     */
     @Test
     public void toList() {
         int[][] array = {{4, 2}, {3, 2}, {3, 2}};
@@ -32,6 +35,9 @@ public class ConvertArrayListTest {
         assertThat(listExpected.size(), is(list.size()));
     }
 
+    /**
+     * Тест перевода из коллекции в массива.
+     */
     @Test
     public void toArray() {
         final int[][] expectedArray = {{4, 2, 3}, {2, 3, 2}, {0, 0, 0}};
@@ -48,6 +54,9 @@ public class ConvertArrayListTest {
         Assert.assertArrayEquals(expectedArray, actualArray);
     }
 
+    /**
+     * Тест получения колличества строк и столбцов.
+     */
     @Test
     public void getRows() {
         final int expectedRows = 3;
@@ -63,6 +72,9 @@ public class ConvertArrayListTest {
         Assert.assertTrue(expectedRows == actualRows);
     }
 
+    /**
+     * Тест переноса данных из коллекции List<int[]> в List<Integer>.
+     */
     @Test
     public void convert() {
         List<int[]> list = new ArrayList<>();

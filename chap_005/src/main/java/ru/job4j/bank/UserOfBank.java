@@ -7,7 +7,13 @@ import java.util.List;
  * @author Aleksandr Smirnov.
  */
 public class UserOfBank {
+    /**
+     * Имя пользователя.
+     */
     private String name;
+    /**
+     * Паспортные данные пользователя.
+     */
     private int passport;
 
     public UserOfBank(String name, int passport) {
@@ -54,6 +60,6 @@ public class UserOfBank {
     public String toString() {
         return "UserOfBank{" +
                 "name='" + name + '\'' +
-                ", passport=" + passport+"\n";
+                ", passport=" + passport + "\n";
     }
 }

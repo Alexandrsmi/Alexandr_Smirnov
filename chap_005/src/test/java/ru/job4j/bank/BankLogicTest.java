@@ -13,16 +13,46 @@ import java.util.Map;
  * @author Aleksandr Smirnov.
  */
 public class BankLogicTest {
+    /**
+     * Экземпляр класса BankLogic.
+     */
     private final BankLogic bankLogic = new BankLogic(new ArrayList<>(), new ArrayList<>(), new HashMap<>());
+    /**
+     * Коллекция пользователей банка.
+     */
     private final List<UserOfBank> userList = bankLogic.getUserList();
+    /**
+     * Коллекция счетов пользователей.
+     */
     private final Map<UserOfBank, List<Accounts>> userState = bankLogic.getUserState();
-    final UserOfBank userOfBank = new UserOfBank("Vasya", 12345);
-    final UserOfBank userOfBank2 = new UserOfBank("Vasya", 123456);
+    /**
+     * Создаем пользователя.
+     */
+    private final UserOfBank userOfBank = new UserOfBank("Vasya", 12345);
+    /**
+     * Создаем пользователя.
+     */
+    private final UserOfBank userOfBank2 = new UserOfBank("Vasya", 123456);
+    /**
+     * Создаем счет.
+     */
     private final Account account = new Account(300, 1234555);
+    /**
+     * Создаем счет.
+     */
     private final Account account2 = new Account(400, 12345553);
+    /**
+     * Создаем счет.
+     */
     private final Account account3 = new Account(500, 12345554);
+    /**
+     * Создаем счет.
+     */
     private final Account account4 = new Account(600, 12345556);
 
+    /**
+     * Тест добавления пользователя.
+     */
     @Test
     public void addUser() {
         bankLogic.addUser(userOfBank);
@@ -30,6 +60,9 @@ public class BankLogicTest {
         Assert.assertTrue(userList.size() > 0);
     }
 
+    /**
+     * Тест удаления пользователя.
+     */
     @Test
     public void deleteUser() {
         bankLogic.deleteUser(userOfBank);
@@ -37,6 +70,9 @@ public class BankLogicTest {
 
     }
 
+    /**
+     * Тест добавления счета пользователю.
+     */
     @Test
     public void addAccountToUser() {
         bankLogic.addAccountToUser(userOfBank, account);
@@ -45,6 +81,9 @@ public class BankLogicTest {
         Assert.assertTrue(userState.size() > 0);
     }
 
+    /**
+     * Тест удаления счета пользователя.
+     */
     @Test
     public void deleteAccountFromUser() {
         bankLogic.addAccountToUser(userOfBank, account);
@@ -54,6 +93,9 @@ public class BankLogicTest {
         Assert.assertTrue(size > userState.get(userOfBank).size());
     }
 
+    /**
+     * Тест получения всех счетов пользователя.
+     */
     @Test
     public void getUserAccounts() {
         bankLogic.addAccountToUser(userOfBank, account);
@@ -65,6 +107,9 @@ public class BankLogicTest {
         Assert.assertTrue(list.equals(listExpected));
     }
 
+    /**
+     * Тест перевода средст.
+     */
     @Test
     public void transferMoney() {
         bankLogic.addAccountToUser(userOfBank, account);

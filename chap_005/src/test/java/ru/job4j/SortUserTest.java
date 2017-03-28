@@ -14,24 +14,37 @@ import static org.junit.Assert.assertThat;
  */
 public class SortUserTest {
     /**
+     * Создаем пользователя.
+     */
+    private final User user2 = new User(2, "55555", "c", (byte) 11);
+    /**
+     * Создаем пользователя.
+     */
+    private final User user3 = new User(3, "333", "f", (byte) 12);
+    /**
+     * Создаем пользователя.
+     */
+    private final User user = new User(1, "4444", "b", (byte) 10);
+    /**
+     * Создаем коллекцию пользователей.
+     */
+    private final List<User> users = new LinkedList<>();
+
+    /**
      * Тест сортировки по возрасту.
      */
     @Test
     public void sortByAge() {
-        User user2 = new User(2, "55555", "c", (byte) 11);
-        User user3 = new User(3, "333", "f", (byte) 12);
-        User user = new User(1, "4444", "b", (byte) 10);
-        List<User> users = new LinkedList<>();
         users.add(user3);
         users.add(user);
         users.add(user2);
         SortUser sortUser = new SortUser();
         Set<User> actualList = sortUser.sortByAge(users);
-        Set<User> expectedList= new TreeSet<>();
+        Set<User> expectedList = new TreeSet<>();
         expectedList.add(user);
         expectedList.add(user2);
         expectedList.add(user3);
-        assertThat(expectedList,is(actualList));
+        assertThat(expectedList, is(actualList));
     }
 
     /**
@@ -39,20 +52,16 @@ public class SortUserTest {
      */
     @Test
     public void sortByNameLength() {
-        User user2 = new User(2, "55555", "c", (byte) 11);
-        User user3 = new User(3, "333", "f", (byte) 12);
-        User user = new User(1, "4444", "b", (byte) 10);
-        List<User> users = new LinkedList<>();
         users.add(user);
         users.add(user3);
         users.add(user2);
         SortUser sortUser = new SortUser();
         List<User> actualList = sortUser.sortByNameLength(users);
-        List<User> expectedList= new ArrayList<>();
+        List<User> expectedList = new ArrayList<>();
         expectedList.add(user3);
         expectedList.add(user);
         expectedList.add(user2);
-        assertThat(expectedList,is(actualList));
+        assertThat(expectedList, is(actualList));
 
     }
 
@@ -61,19 +70,15 @@ public class SortUserTest {
      */
     @Test
     public void sortHash() {
-        User user2 = new User(2, "55555", "c", (byte) 11);
-        User user3 = new User(3, "333", "f", (byte) 12);
-        User user = new User(1, "4444", "b", (byte) 10);
-        List<User> users = new LinkedList<>();
         users.add(user);
         users.add(user3);
         users.add(user2);
         SortUser sortUser = new SortUser();
-        List<User>  actualList = sortUser.sortHash(users);
-        List<User> expectedList= new ArrayList<>();
+        List<User> actualList = sortUser.sortHash(users);
+        List<User> expectedList = new ArrayList<>();
         expectedList.add(user3);
         expectedList.add(user);
         expectedList.add(user2);
-        assertThat(expectedList,is(actualList));
+        assertThat(expectedList, is(actualList));
     }
 }
