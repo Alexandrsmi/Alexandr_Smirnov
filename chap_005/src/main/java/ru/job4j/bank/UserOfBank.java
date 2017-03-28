@@ -9,15 +9,12 @@ import java.util.List;
 public class UserOfBank {
     private String name;
     private int passport;
-//    private List<Accounts> accountsList = new ArrayList<>();
 
     public UserOfBank(String name, int passport) {
         this.name = name;
         this.passport = passport;
-//        this.accountsList = accountsList;
     }
-    public UserOfBank() {
-    }
+
 
     public String getName() {
         return name;
@@ -34,14 +31,6 @@ public class UserOfBank {
     public void setPassport(int passport) {
         this.passport = passport;
     }
-
-//    public List<Accounts> getAccountsList() {
-//        return accountsList;
-//    }
-
-//    public void setAccountsList(List<Accounts> accountsList) {
-//        this.accountsList = accountsList;
-//    }
 
     @Override
     public boolean equals(Object o) {
