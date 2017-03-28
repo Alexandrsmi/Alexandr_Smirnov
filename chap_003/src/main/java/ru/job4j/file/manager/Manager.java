@@ -52,7 +52,8 @@ public class Manager {
             this.currentDir = file.getPath();
             return operation.getMessage();
         }
-        return "'" + name + "' "+ commandNotFound + currentDir + ">";
+        return String.format("%s%s%s%s%s", "'",name,"' ",commandNotFound,currentDir,">");
+
     }
 
     /**
@@ -112,4 +113,6 @@ public class Manager {
     public String getCurrentDir() {
         return currentDir;
     }
+
+
 }

@@ -38,18 +38,18 @@ public class CdOperation implements Operation {
         if (operation[1].equals("..")) {
             newDir = new File(currentDir.getParent());
             if (currentDir.getPath().length() > homeDir.getPath().length()) {
-                message = newDir + ">";
+                message = String.format("%s%s", newDir, ">");
             } else {
-                message = MESSAGE_DO_NOT_CLIMB_ABOUT_THE_ROOT + currentDir.getPath() + '>';
+                message = String.format("%s%s%s", MESSAGE_DO_NOT_CLIMB_ABOUT_THE_ROOT, currentDir.getPath(), '>');
             }
         } else if (folder != null) {
             newDir = new File(String.format("%s\\%s", currentDir.getPath(), folder));
             if (newDir.isDirectory()) {
                 currentDir = newDir;
-                message = currentDir.getPath() + ">";
+                message = String.format("%s%s", currentDir.getPath(), ">");
                 return currentDir;
             } else {
-                message = MESSAGE_PATH_NOT_FOUND + currentDir.getPath() + '>';
+                message = String.format("%s%s%s", MESSAGE_PATH_NOT_FOUND, currentDir.getPath(), '>');
             }
         }
         return currentDir;

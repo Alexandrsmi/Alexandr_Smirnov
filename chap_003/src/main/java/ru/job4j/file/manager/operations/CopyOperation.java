@@ -25,7 +25,7 @@ public class CopyOperation implements Operation {
         File newFile = currentDir;
         homeDir = new File(currentDir.getPath() + "\\" + operation[1]);
         if (!homeDir.isFile() && !homeDir.isDirectory()) {
-            message = MESSAGE_FILE_NOT_FOUND + currentDir + ">";
+            message = String.format("%s%s%s", MESSAGE_FILE_NOT_FOUND, currentDir, ">");
             return currentDir;
         }
         newFile = new File(operation[2] + "\\" + operation[1]);
@@ -34,7 +34,7 @@ public class CopyOperation implements Operation {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        message = currentDir.getPath() + ">";
+        message =String.format("%s%s",currentDir.getPath(),">");
         return currentDir;
     }
 

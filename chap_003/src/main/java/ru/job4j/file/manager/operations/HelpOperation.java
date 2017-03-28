@@ -3,6 +3,7 @@ package ru.job4j.file.manager.operations;
 import ru.job4j.file.manager.Manager;
 
 import java.io.File;
+
 /**
  * @author Aleksandr Smirnov.
  */
@@ -27,7 +28,7 @@ public class HelpOperation implements Operation {
 
     @Override
     public File execute(String[] operation, File homeDir, File currentDir) {
-        message = currentDir.getPath()+">";
+        message = String.format("%s%s", currentDir.getPath(), ">");
         return currentDir;
     }
 
