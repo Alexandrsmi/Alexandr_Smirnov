@@ -8,15 +8,15 @@ import java.util.*;
  */
 public class BankLogic {
     /**
-     *
+     * Коллекция пользователей.
      */
     private  final List<UserOfBank> userList;
     /**
-     *
+     * Коллекция счетов.
      */
     private final List<Accounts> accounts;
     /**
-     *
+     * Коллекция счетов пользователей.
      */
     private final Map<UserOfBank, List<Accounts>> userState;
 
