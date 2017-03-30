@@ -17,6 +17,7 @@ public class BankLogic {
     public BankLogic(final Map<UserOfBank, List<Accounts>> userState) {
         this.userState = userState;
     }
+
     /**
      * Метод добавляет пользователя.
      *
@@ -26,6 +27,7 @@ public class BankLogic {
     public void addUser(UserOfBank user) {
         userState.put(user, new ArrayList<>());
     }
+
     /**
      * Метод удаляет пользователя.
      *
@@ -42,10 +44,7 @@ public class BankLogic {
      * @param account - счет.
      */
     public void addAccountToUser(UserOfBank user, Account account) {
-        if (userState.get(user) == null) {
-            userState.put(user, new ArrayList<>());
-            userState.get(user).add(account);
-        } else {
+        if (userState.containsKey(user)&&!userState.get(user).contains(account)) {
             userState.get(user).add(account);
         }
     }
@@ -57,7 +56,11 @@ public class BankLogic {
      * @param account - счет.
      */
     public void deleteAccountFromUser(UserOfBank user, Account account) {
-        userState.get(user).remove(account);
+        if (userState.containsKey(user)&&userState.get(user).contains(account)) {
+            userState.get(user).remove(account);
+        }else {
+            System.out.println("Error");
+        }
     }
 
     /**
@@ -67,8 +70,11 @@ public class BankLogic {
      * @return - список счетов.
      */
     public List<Accounts> getUserAccounts(UserOfBank user) {
-        List<Accounts> list = userState.get(user);
-        return list;
+        if (userState.containsKey(user)) {
+            List<Accounts> list = userState.get(user);
+            return list;
+        }
+        return new ArrayList<>();
     }
 
     /**
@@ -82,7 +88,8 @@ public class BankLogic {
      * @return - true - перевод состоялся, false - ошибка при переводе.
      */
     public boolean transferMoney(UserOfBank srcUser, Account srcAccount, UserOfBank dstUser, Account dstAccount, double amount) {
-        if (srcAccount != null && dstAccount != null && srcAccount.hashCode() != dstAccount.hashCode()) {
+        if (userState.get(srcUser).contains(srcAccount) && userState.get(dstUser).contains(dstAccount)
+                && srcAccount.hashCode() != dstAccount.hashCode()) {
             for (Accounts accounts : userState.get(srcUser)) {
                 if (accounts.hashCode() == srcAccount.hashCode() && srcAccount.getValues() - amount >= 0) {
                     srcAccount.setValues(srcAccount.getValues() - amount);

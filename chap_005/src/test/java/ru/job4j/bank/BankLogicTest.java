@@ -61,6 +61,7 @@ public class BankLogicTest {
      */
     @Test
     public void deleteUser() {
+        bankLogic.addUser(userOfBank);
         bankLogic.deleteUser(userOfBank);
         Assert.assertTrue(userState.size() == 0);
 
@@ -71,6 +72,7 @@ public class BankLogicTest {
      */
     @Test
     public void addAccountToUser() {
+        bankLogic.addUser(userOfBank);
         bankLogic.addAccountToUser(userOfBank, account);
         bankLogic.addAccountToUser(userOfBank, account3);
         bankLogic.addAccountToUser(userOfBank, account4);
@@ -82,6 +84,7 @@ public class BankLogicTest {
      */
     @Test
     public void deleteAccountFromUser() {
+        bankLogic.addUser(userOfBank);
         bankLogic.addAccountToUser(userOfBank, account);
         bankLogic.addAccountToUser(userOfBank, account3);
         int size = userState.get(userOfBank).size();
@@ -94,9 +97,10 @@ public class BankLogicTest {
      */
     @Test
     public void getUserAccounts() {
+        bankLogic.addUser(userOfBank);
         bankLogic.addAccountToUser(userOfBank, account);
         bankLogic.addAccountToUser(userOfBank, account2);
-        List<Accounts> listExpected = userState.get(userOfBank);
+        List<Accounts> listExpected = bankLogic.getUserAccounts(userOfBank);
         List<Accounts> list = new ArrayList<>();
         list.add(account);
         list.add(account2);
@@ -108,6 +112,8 @@ public class BankLogicTest {
      */
     @Test
     public void transferMoney() {
+        bankLogic.addUser(userOfBank);
+        bankLogic.addUser(userOfBank2);
         bankLogic.addAccountToUser(userOfBank, account);
         bankLogic.addAccountToUser(userOfBank2, account2);
         boolean result = bankLogic.transferMoney(userOfBank, account, userOfBank2, account2, 20);
