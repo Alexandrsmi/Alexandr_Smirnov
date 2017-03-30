@@ -72,8 +72,8 @@ public class ConvertArrayList {
     public List<Integer> convert(List<int[]> list) {
         List<Integer> result = new LinkedList<>();
         for (int[] array : list) {
-            for (Integer j : array) {
-                result.add(j);
+            for (Integer element : array) {
+                result.add(element);
             }
         }
         return result;
