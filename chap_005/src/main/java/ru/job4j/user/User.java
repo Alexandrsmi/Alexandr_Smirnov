@@ -1,6 +1,7 @@
 package ru.job4j.user;
 
 
+import java.util.Collections;
 
 /**
  * @author Aleksandr Smirnov.
@@ -86,5 +87,4 @@ public class User implements Comparable<User> {
         }
         return 0;
     }
-
 }

@@ -12,7 +12,6 @@ public class Account extends Accounts {
      * Номер счета.
      */
     private int requisites;
-
     /**
      * Конструктор по умолчанию.
      * @param values - средства.
@@ -47,4 +46,24 @@ public class Account extends Accounts {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Account)) return false;
+
+        Account account = (Account) o;
+
+        if (Double.compare(account.values, values) != 0) return false;
+        return requisites == account.requisites;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(values);
+        result = (int) (temp ^ (temp >>> 32));
+        result = 31 * result + requisites;
+        return result;
+    }
 }

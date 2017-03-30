@@ -53,7 +53,6 @@ public class ConvertArrayList {
      * @param list - входящий список.
      * @return rows - кол-во колонок.
      */
-
     public int getRows(List<Integer> list) {
         int rows = list.size();
         do {
@@ -64,7 +63,6 @@ public class ConvertArrayList {
         } while (rows % 1 == 0);
         return 0;
     }
-
     /**
      * Метод переносит данные из List<int[]> в List<Integer>.
      *
@@ -73,8 +71,7 @@ public class ConvertArrayList {
      */
     public List<Integer> convert(List<int[]> list) {
         List<Integer> result = new LinkedList<>();
-        for (int[] i : list) {
-            int[] array = i;
+        for (int[] array : list) {
             for (Integer j : array) {
                 result.add(j);
             }

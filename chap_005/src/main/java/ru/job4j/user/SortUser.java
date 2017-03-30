@@ -14,7 +14,6 @@ public class SortUser {
      */
 
     public Set<User> sortByAge(List<User> list) {
-        Collections.sort(list);
         Set<User> set = new TreeSet<>();
         for (User a : list) {
             set.add(a);
@@ -29,12 +28,13 @@ public class SortUser {
      * @return collection -  ArrayList коллекция.
      */
     public List<User> sortByNameLength(List<User> list) {
-        Collections.sort(list, new UserLengthNameComparator());
-        List<User> collection = new ArrayList<>();
-        for (User a : list) {
-            collection.add(a);
-        }
-        return collection;
+        Collections.sort(list, new Comparator<User>() {
+            @Override
+            public int compare(User o1, User o2) {
+                return Integer.compare(o1.getName().length(), o2.getName().length());
+            }
+        });
+        return list;
     }
 
     /**
@@ -44,11 +44,12 @@ public class SortUser {
      * @return collection - ArrayList коллекция.
      */
     public List<User> sortHash(List<User> list) {
-        Collections.sort(list, new UserHashCodeComparator());
-        List<User> collection = new ArrayList<>();
-        for (User a : list) {
-            collection.add(a);
-        }
-        return collection;
+        Collections.sort(list, new Comparator<User>() {
+            @Override
+            public int compare(User o1, User o2) {
+                return Integer.compare(o1.hashCode(),o2.hashCode());
+            }
+        });
+        return list;
     }
 }

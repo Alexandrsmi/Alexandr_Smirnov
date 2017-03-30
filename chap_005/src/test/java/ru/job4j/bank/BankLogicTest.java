@@ -16,13 +16,9 @@ public class BankLogicTest {
     /**
      * Экземпляр класса BankLogic.
      */
-    private final BankLogic bankLogic = new BankLogic(new ArrayList<>(), new ArrayList<>(), new HashMap<>());
+    private final BankLogic bankLogic = new BankLogic(new HashMap<>());
     /**
      * Коллекция пользователей банка.
-     */
-    private final List<UserOfBank> userList = bankLogic.getUserList();
-    /**
-     * Коллекция счетов пользователей.
      */
     private final Map<UserOfBank, List<Accounts>> userState = bankLogic.getUserState();
     /**
@@ -57,7 +53,7 @@ public class BankLogicTest {
     public void addUser() {
         bankLogic.addUser(userOfBank);
         bankLogic.addUser(userOfBank2);
-        Assert.assertTrue(userList.size() > 0);
+        Assert.assertTrue(userState.size() > 0);
     }
 
     /**
@@ -66,7 +62,7 @@ public class BankLogicTest {
     @Test
     public void deleteUser() {
         bankLogic.deleteUser(userOfBank);
-        Assert.assertTrue(userList.size() == 0);
+        Assert.assertTrue(userState.size() == 0);
 
     }
 

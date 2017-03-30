@@ -10,6 +10,7 @@
         <module name="chap_003" />
         <module name="chap_004" />
         <module name="chap_005" />
+        <module name="chap_007" />
         <module name="chapter_001" />
         <module name="chess" />
         <module name="chess (1) (ru.job4j.chess)" />
@@ -25,6 +26,7 @@
       <module name="chap_003" target="1.8" />
       <module name="chap_004" target="1.8" />
       <module name="chap_005" target="1.8" />
+      <module name="chap_007" target="1.8" />
       <module name="chapter_001" target="1.8" />
       <module name="chapter_002" target="1.8" />
       <module name="chapter_002 (1)" target="1.5" />

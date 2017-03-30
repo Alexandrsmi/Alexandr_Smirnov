@@ -2,6 +2,9 @@ package ru.job4j.start;
 
 import ru.job4j.models.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
  * @author Aleksandr Smirnov.
  * @version 1.
@@ -13,6 +16,7 @@ public class MenuTracker {
     private Input input;
     private Tracker tracker;
     private UserAction[] actions = new UserAction[7];
+//    private List<BaseAction> actions = new ArrayList<>();
     private int position = 0;
 
     public MenuTracker(Input input, Tracker tracker) {
@@ -156,7 +160,7 @@ public class MenuTracker {
             Item item;
             item = tracker.findByName(name);
             if (item != null) {
-                System.out.println(item.toString());
+                System.out.printf(item.toString());
             } else {
                 System.out.println("File isn't find. Please enter correct name.");
             }
