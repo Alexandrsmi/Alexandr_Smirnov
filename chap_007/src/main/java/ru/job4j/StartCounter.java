@@ -3,7 +3,7 @@ package ru.job4j;
 /**
  * @author Aleksandr Smirnov.
  */
-public class Count {
+public class StartCounter {
 
     public static void main(String[] args) throws InterruptedException {
         CountSpace countSpace = new CountSpace("1 22 333 4444");

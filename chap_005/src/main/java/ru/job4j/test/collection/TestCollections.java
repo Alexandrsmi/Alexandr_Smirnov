@@ -115,7 +115,7 @@ public class TestCollections {
     public String[] getStringArray() {
         String symbols = "qwerty";
         StringBuilder randString = new StringBuilder();
-        int addCount = (int) (Math.random() * 500) + 200;
+        int addCount = (int) (Math.random() * 400) + 300;
         String[] strings = new String[addCount];
         for (int j = 0; j < addCount; j++) {
             randString.append(symbols.charAt((int) (Math.random() * symbols.length())));
