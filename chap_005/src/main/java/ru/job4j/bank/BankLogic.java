@@ -17,7 +17,6 @@ public class BankLogic {
     public BankLogic(final Map<UserOfBank, List<Accounts>> userState) {
         this.userState = userState;
     }
-
     /**
      * Метод добавляет пользователя.
      *
@@ -25,9 +24,8 @@ public class BankLogic {
      */
 
     public void addUser(UserOfBank user) {
-        userState.put(user, null);
+        userState.put(user, new ArrayList<>());
     }
-
     /**
      * Метод удаляет пользователя.
      *
