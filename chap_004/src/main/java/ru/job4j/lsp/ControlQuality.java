@@ -51,34 +51,7 @@ public class ControlQuality {
             }
         }
     }
-//
-    public static void main(String[] args) {
-        ControlQuality controlQuality = new ControlQuality();
-        Food food = new Milk(new GregorianCalendar(2017, 3, 7));
-        Food food2 = new Milk(new GregorianCalendar(2017, 2, 28));
-        Food food3 = new Milk(new GregorianCalendar(2017, 3, 4));
-        Food food1 = new Curd(new GregorianCalendar(2017,3,6));
-        food1.getExpiryDate();
-        controlQuality.addFoodOnStorehouse(food1);
-        food2.getExpiryDate();
-        food.getExpiryDate();
-        food3.getExpiryDate();
-        controlQuality.addFoodOnStorehouse(food3);
-        controlQuality.addFoodOnStorehouse(food);
-        controlQuality.addFoodOnStorehouse(food2);
-        food.setCreateDate(new GregorianCalendar(2017,3,9));
-        food.getExpiryDate();
-        controlQuality.addFoodOnStorehouse(food);
-        food.setCreateDate(new GregorianCalendar(2017,3,1));
-        food.getExpiryDate();
-        controlQuality.addFoodOnStorehouse(food);
-        food.setCreateDate(new GregorianCalendar(2017,2,3));
-        food.getExpiryDate();
-        controlQuality.addFoodOnStorehouse(food);
-        for (Storehouse storeg : storegs) {
-            System.out.println(storeg);
-        }
-    }
+
 
     public List<Storehouse> getList() {
         return list;
