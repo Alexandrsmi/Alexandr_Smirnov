@@ -62,7 +62,6 @@ public class BankLogic {
             System.out.println("Error");
         }
     }
-
     /**
      * Медот выдает список счетов пользователя.
      *
@@ -76,7 +75,6 @@ public class BankLogic {
         }
         return new ArrayList<>();
     }
-
     /**
      * Метод переводит средства с одного счета на другой.
      *
