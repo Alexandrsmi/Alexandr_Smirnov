@@ -13,8 +13,17 @@ public class CountWord implements Runnable {
     }
 
     public int getCountWord() {
-        String[] strings = string.split(" ");
-        return strings.length;
+        int count = 0;
+        String s = string.trim();
+        char[] chars = s.toCharArray();
+        for (char chars1 : chars) {
+            if (chars1 == ' ') {
+                count++;
+            }
+        }
+//        String[] strings = string.split(" ");
+//        return strings.length;
+        return ++count;
     }
 
     @Override

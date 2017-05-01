@@ -34,7 +34,6 @@ public abstract class Food {
      */
     private static final double discount = 0.75;
     private final boolean canReproduct;
-
     /**
      * Конструктор по умолчанию.
      * @param name - название.
@@ -111,6 +110,9 @@ public abstract class Food {
         return discount;
     }
 
+    public boolean isCanReproduct() {
+        return canReproduct;
+    }
 
     @Override
     public String toString() {
@@ -121,4 +123,5 @@ public abstract class Food {
                 ", price=" + price +
                 '}'+"\n"+"\t" + getPercentByTime();
     }
+
 }

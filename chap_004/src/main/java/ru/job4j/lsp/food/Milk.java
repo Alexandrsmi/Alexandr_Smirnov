@@ -26,7 +26,7 @@ public class Milk extends Food {
     /**
      * Подходит для переработки. true - подходит, false - не подходит.
      */
-    private static final boolean CAN_REPRODUCT = true;
+    private static final boolean CAN_REPRODUCT = false;
     /**
      * Конструктор по умолчанию.
      *

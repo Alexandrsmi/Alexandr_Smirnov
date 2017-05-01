@@ -11,8 +11,17 @@ public class CountSpace implements Runnable {
     }
 
     public int getCountSpace() {
-        String[] strings = string.split(" ");
-        return strings.length - 1;
+        int count = 0;
+        String s = string.trim();
+        char[] chars = s.toCharArray();
+        for (char c : chars) {
+            if (c == ' ') {
+                count++;
+            }
+        }
+        return count;
+//        String[] strings = string.split(" ");
+//        return strings.length - 1;
     }
 
     @Override

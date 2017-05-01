@@ -11,9 +11,13 @@ import java.util.List;
  */
 public abstract class Storehouse {
     /**
-     * Название склада.
+     * название склада.
      */
-    private final String name;
+    private final String storehouseName;
+    /**
+     * Тип склада склада.
+     */
+    private final String storehouseType;
     /**
      * Значение истекшего на 25% срока хранения.
      */
@@ -29,7 +33,9 @@ public abstract class Storehouse {
     /**
      * Коллекция хранилища.
      */
-    private List<Food> storegs = new ArrayList<>();
+    private List<Food> foods = new ArrayList<>();
+
+    private final int storehouseSize;
 
     /**
      * Метод проверяет продукт по сроку годности.
@@ -52,19 +58,27 @@ public abstract class Storehouse {
         return TR;
     }
 
-    public Storehouse(String name) {
-        this.name = name;
+    public Storehouse(String storehouseName, String name, int storehouseSize) {
+        this.storehouseName = storehouseName;
+        this.storehouseType = name;
+        this.storehouseSize = storehouseSize;
     }
 
-    public List<Food> getStoregs() {
-        return storegs;
+
+    public List<Food> getFoods() {
+        return foods;
+    }
+
+    public int getStorehouseSize() {
+        return storehouseSize;
     }
 
     @Override
     public String toString() {
-        return name +
-                "=" + storegs
-                ;
+        return "Storehouse{" +
+                ", storehouseType='" + storehouseType + '\'' +
+                "storehouseName='" + storehouseName + '\'' +
+                ", foods=" + foods +
+                '}';
     }
-
 }
