@@ -2,7 +2,6 @@ package ru.job4j.isp;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * @author Aleksandr Smirnov.
@@ -54,7 +53,12 @@ public class MenuItem  {
         }
     }
 
-    public int fda(String s) {
+    /**]
+     * Метод определяет ко-во пропусков
+     * @param s - строка.
+     * @return - кол-во пропусков.
+     */
+    public int getCountSpace(String s) {
         int count = 0;
         for (char chars1 : s.toCharArray()) {
             if ((int) chars1 > 47 && (int) chars1 < 58) {
@@ -71,7 +75,7 @@ public class MenuItem  {
             return String.format("%s%s%s%s", key, " ", name, "\n");
         }
         String c = "-";
-        int count = fda(key);
+        int count = getCountSpace(key);
         for (int i = 2; i <= count - 1; i++) {
             if (count > 1) {
                 String b = "-";
