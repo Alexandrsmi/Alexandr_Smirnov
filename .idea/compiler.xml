@@ -20,25 +20,16 @@
         <module name="tracker" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="Alexandr_Smirnov" target="1.8" />
       <module name="chap_001" target="1.8" />
-      <module name="chap_002" target="1.8" />
       <module name="chap_003" target="1.8" />
       <module name="chap_004" target="1.8" />
       <module name="chap_005" target="1.8" />
       <module name="chap_007" target="1.8" />
       <module name="chap_008" target="1.8" />
-      <module name="chapter_001" target="1.8" />
-      <module name="chapter_002" target="1.8" />
-      <module name="chapter_002 (1)" target="1.5" />
+      <module name="chap_009" target="1.8" />
       <module name="chess" target="1.8" />
-      <module name="chess (1) (ru.job4j.chess)" target="1.8" />
-      <module name="models" target="1.5" />
-      <module name="models (1) (ru.smirnov.chapter_002.start)" target="1.5" />
-      <module name="tar" target="1.8" />
-      <module name="targ" target="1.8" />
-      <module name="Tracker" target="1.5" />
       <module name="tracker" target="1.8" />
     </bytecodeTargetLevel>
   </component>

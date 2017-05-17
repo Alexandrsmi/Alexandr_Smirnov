@@ -1,10 +1,5 @@
 package ru.job4j.isp;
 
-import ru.job4j.srp.calculator.operations.EquallyOperation;
-import ru.job4j.srp.calculator.operations.ExitOperation;
-import ru.job4j.srp.calculator.operations.Operations;
-import ru.job4j.srp.calculator.operations.arithmetic.*;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;

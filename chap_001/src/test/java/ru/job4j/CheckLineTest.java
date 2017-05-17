@@ -2,6 +2,7 @@ package ru.job4j;
 
 import static org.junit.Assert.assertThat;
 import org.junit.Test;
+
 import static org.hamcrest.core.Is.is;
 /**
  * Тест класса определяющего является ли строка sub подстрокой original.

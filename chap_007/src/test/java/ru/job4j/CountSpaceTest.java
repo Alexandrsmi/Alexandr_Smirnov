@@ -1,8 +1,7 @@
 package ru.job4j;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import ru.job4j.threads.CountSpace;
 
 /**
  * @author Aleksandr Smirnov.

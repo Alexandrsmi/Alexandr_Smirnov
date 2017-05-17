@@ -1,6 +1,6 @@
 package ru.job4j;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 import ru.job4j.bot.Action;
 
 import java.io.File;
