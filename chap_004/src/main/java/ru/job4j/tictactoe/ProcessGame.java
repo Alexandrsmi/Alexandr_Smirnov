@@ -19,7 +19,7 @@ public class ProcessGame {
      * Поля вывода сообщений для взаимодействия с пользователем.
      */
     private final static String INPUT_COUNT_ROUND = "Введите кол-во раундов ";
-    private final static String INPUT_BOARD_SIZE = "Введите размер поля ";
+    private final static String INPUT_BOARD_SIZE = "Для смены размера игрового поля нажминие 'y'";
     private final static String MSG_END_GAME_OR_CONTINUE = "Чтобы продолжить введите 'y'";
     private final static String PLAYER_NAME = "Игрок ";
     private final static String COUNT_TOTAL_WIN = " имеет общее число побед - ";
@@ -83,7 +83,7 @@ public class ProcessGame {
                 coordinates = gameLogic.botMove(board.getCells());
             }
             gameLogic.setStatusCellByCoordinates(coordinates, player, board.getCells());
-        } while (!gameLogic.checkWinnerInRound(board.getCells(),player));
+        } while (!gameLogic.checkWinnerInRound(board.getCells(), player));
         UI.printBoard(board.getCells());//после раунда выводим игровое поле.
         return player;
     }
@@ -95,7 +95,12 @@ public class ProcessGame {
         System.out.println(INPUT_POSITION_PlAYER);
         playersFactory.addArrayPlayer(inputIntValue.writeValue());
         outputTicTacToe.ask(INPUT_BOARD_SIZE);
-        int boardSize = inputIntValue.writeValue();
+        int boardSize;
+        if (gameLogic.checkInputY(input.write())) {
+            boardSize = inputIntValue.writeValue();
+        } else {
+            boardSize = board.getCellSSize();
+        }
         outputTicTacToe.ask(INPUT_COUNT_ROUND);
         int countWinnerForVictory = inputIntValue.writeValue();
         Player player;
@@ -121,7 +126,7 @@ public class ProcessGame {
             downPlayerRound();
             playerOne = playersFactory.getPlayersArray()[0];
             playerTwo = playersFactory.getPlayersArray()[1];
-        } while (gameLogic.endOrContinueGame(input.write()));
+        } while (gameLogic.checkInputY(input.write()));
         outputTicTacToe.ask(String.format("%s%s%s%s", PLAYER_NAME, playerOne.getPlayerName(), COUNT_TOTAL_WIN,
                 playerOne.getTotalCountWin()));
         outputTicTacToe.ask(String.format("%s%s%s%s", PLAYER_NAME, playerTwo.getPlayerName(), COUNT_TOTAL_WIN,

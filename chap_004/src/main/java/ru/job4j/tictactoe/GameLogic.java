@@ -206,7 +206,7 @@ public class GameLogic {
         return false;
     }
 
-    public boolean endOrContinueGame(String command) {
+    public boolean checkInputY(String command) {
         return command.equals("y") ? true : false;
     }
 

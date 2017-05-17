@@ -2,6 +2,7 @@ package ru.job4j.tictactoe;
 
 /**
  * Класс игрового поля.
+ *
  * @author Aleksandr Smirnov.
  */
 public class Board {
@@ -9,9 +10,11 @@ public class Board {
      * Массив ячеек.
      */
     private Cell[][] cells;
+    private int cellSSize = 3;
 
     /**
      * Метод формирует игровое поле и устанавливает в ячейки статус EMPTY.
+     *
      * @param cellSize - размер поля.
      * @return - массив.
      */
@@ -28,5 +31,13 @@ public class Board {
 
     public Cell[][] getCells() {
         return cells;
+    }
+
+    public int getCellSSize() {
+        return cellSSize;
+    }
+
+    public void setCellSSize(int cellSSize) {
+        this.cellSSize = cellSSize;
     }
 }
