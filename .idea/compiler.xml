@@ -12,11 +12,14 @@
         <module name="chap_005" />
         <module name="chap_007" />
         <module name="chap_008" />
+        <module name="chap_010" />
         <module name="chapter_001" />
         <module name="chess" />
         <module name="chess (1) (ru.job4j.chess)" />
         <module name="models" />
         <module name="models (1) (ru.smirnov.chapter_002.start)" />
+        <module name="task_1" />
+        <module name="task_2 (1)" />
         <module name="tracker" />
       </profile>
     </annotationProcessing>
@@ -29,7 +32,11 @@
       <module name="chap_007" target="1.8" />
       <module name="chap_008" target="1.8" />
       <module name="chap_009" target="1.8" />
+      <module name="chap_010" target="1.5" />
       <module name="chess" target="1.8" />
+      <module name="task_1" target="1.8" />
+      <module name="task_2" target="1.8" />
+      <module name="task_2 (1)" target="1.5" />
       <module name="tracker" target="1.8" />
     </bytecodeTargetLevel>
   </component>

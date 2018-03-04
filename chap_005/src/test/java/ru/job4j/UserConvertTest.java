@@ -2,9 +2,9 @@ package ru.job4j;
 
 import org.junit.Assert;
 import org.junit.Test;
-import ru.job4j.user.SortUser;
-import ru.job4j.user.User;
-import ru.job4j.user.UserConvert;
+import ru.job4j.services.SortUser;
+import ru.job4j.services.User;
+import ru.job4j.services.UserConvert;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,7 +1,7 @@
 package ru.job4j;
 
 /**
- * Class проверяющий отсортирован массив или нет.
+ *The class checks whether the array or not (проверяющий отсортирован массив или нет).
  * @author Aleksandr Smirnov.
  * @version 1.0.
  * @since 05.02.2017.

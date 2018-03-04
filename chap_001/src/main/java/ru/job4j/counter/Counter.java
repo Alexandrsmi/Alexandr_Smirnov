@@ -1,16 +1,18 @@
 package ru.job4j.counter;
 
 	/**
+     * Class for calculating the sum of even numbers in a given interval.
 	 * Класс вычисления суммы четных чисел в заданном интервале.
 	 * @author smirnov
 	 * @since 21.01.2017
 	 */
 public class Counter {
 	/**
+     * The method calculating the sum of even numbers.
 	 * Метод вычисляющий сумму четных чисел.
-	 * @param start - начальное значение интервала.
-	 * @param finish - конечное значени интервала.
-	 * @return sum - возвращение суммы чисел в заданном интервале.
+	 * @param start - Initial value of interval начальное значение интервала.
+	 * @param finish - the final value of interval. конечное значени интервала.
+	 * @return sum - The sum of numbers in a given interval возвращение суммы чисел в заданном интервале.
 	 */
     public long add(long start, long finish) {
         long counter = start;

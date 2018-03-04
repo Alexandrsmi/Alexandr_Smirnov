@@ -6,9 +6,10 @@ package ru.job4j;
 	 */
 public class Turn {
 	/**
+     * The method of turning over array.
 	 * Метод переворачивающий массив.
-	 * @param array - входящий массив.
-	 * @return возвращаем обработанный массив.
+	 * @param array - the incoming array (входящий массив).
+	 * @return the return processed array (возвращаем обработанный массив).
 	 */
     public int[] getBackArray(int[] array) {
         for (int i = 0; i < array.length / 2; i++) {

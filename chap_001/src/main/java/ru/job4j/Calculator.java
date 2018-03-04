@@ -1,6 +1,7 @@
 package ru.job4j;
 
 /**
+ * The class outcoming "Hello world".
  * Класс выводящий "Hello world".
  *
  * @author smirnov
@@ -9,6 +10,7 @@ package ru.job4j;
  */
 public class Calculator {
     /**
+     * The outcomming in console.
      * Вывод строки в консоль.
      *
      * @param arg - arg.

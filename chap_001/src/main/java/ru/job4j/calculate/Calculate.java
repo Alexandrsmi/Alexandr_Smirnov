@@ -7,44 +7,44 @@ package ru.job4j.calculate;
 	 */
 public class Calculate {
 	/**
-	 * @param result - хранения результата.
+	 * @param result - keeping result.
 	 */
     private double result;
 	/**
-	 * Метод получения суммы двух чисел.
-	 * @param first первый аргумент.
-	 * @param second второй аргумент.
+	 * The method of sum of two numbers
+	 * @param first first argument.
+	 * @param second second argument.
 	 */
     public void getSum(double first, double second) {
         this.result = first + second;
     }
 	/**
-	 * Метод получения разности двух чисел.
-	 * @param first первый аргумент.
-	 * @param second второй аргумент.
+	 * The method of subtraction of two numbers.
+	 * @param first first argument.
+	 * @param second second argument.
 	 */
     public void getSub(double first, double second) {
         this.result = first - second;
     }
 	/**
-	 * Метод получения частного двух чисел.
-	 * @param first первый аргумент.
-	 * @param second второй аргумент.
+	 *The method of division of two numbers.
+	 * @param first first argument.
+	 * @param second second argument.
 	 */
     public void getDiv(double first, double second) {
         this.result = first / second;
     }
 	/**
-	 * Метод получения произведения двух чисел.
-	 * @param first первый аргумент.
-	 * @param second второй аргумент.
+	 * The method of multiplication of two numbers.
+	 * @param first first argument.
+	 * @param second second argument.
 	 */
     public void getMul(double first, double second) {
         this.result = first * second;
     }
 	/**
-	 * Метод получения значения поля result.
-	 * @return - получения значения result.
+	 * The method of getting the value of the "result" variable.
+	 * @return - of getting the value og the "result" variable.
 	 */
 	 public double getResult() {
         return result;

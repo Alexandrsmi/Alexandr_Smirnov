@@ -1,7 +1,5 @@
-package ru.job4j.user;
+package ru.job4j.services;
 
-
-import java.util.Collections;
 
 /**
  * @author Aleksandr Smirnov.

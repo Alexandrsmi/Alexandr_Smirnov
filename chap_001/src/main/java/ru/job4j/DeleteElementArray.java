@@ -2,15 +2,17 @@ package ru.job4j;
 import java.util.Arrays;
 
 	/**
-	* Класс удаляющий дубликаты из массива массива.
+     * The class deletes of the duplicates from the array.
+	* Класс удаляющий дубликаты из массива.
 	* @author smirnov
 	* @since 22.01.2017
 	*/
 public class DeleteElementArray {
 	/**
+     * The method set the "null" to duplicate elements.
 	* Метод присваивает дублирующимся элементам - null.
-	* @param strings - входящий массив строк.
-	* @return strings - возвращение обработанного массива.
+	* @param strings -the incoming array string(входящий массив строк).
+	* @return strings - the return processed array (возвращение обработанного массива).
 	*/
     public String[] allocNullToDuplicatingElements(String[] strings) {
         for (int i = strings.length - 1; i >= 0; i--) {
@@ -23,9 +25,10 @@ public class DeleteElementArray {
         return strings;
     }
 	/**
+     * The method wrap around in the end array.
 	* Метод переносит null элементы в конец массива.
-	* @param strings - входящий массив.
-	* @return strings - возврат обработанного массива.
+	* @param strings - The incoming array (входящий массив).
+	* @return strings - the return of processed array (возврат обработанного массива).
 	*/
     public String[] sortNullTheElementsArray(String[] strings) {
         int count = 0;
@@ -42,9 +45,10 @@ public class DeleteElementArray {
         return strings;
     }
 	/**
+     * The method deletes "null" value from the array.
 	* Метод удаляет null значение из массива.
-	* @param strings - входящий массив.
-	* @return arrayCopy - возврат обработанного массива.
+	* @param strings - The incoming array(входящий массив).
+	* @return arrayCopy - The outcoming processed array  (возврат обработанного массива).
 	*/
     public String[] deletionNullInArray(String[] strings) {
         int countNull = 0;

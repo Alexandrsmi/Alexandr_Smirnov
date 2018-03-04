@@ -1,14 +1,12 @@
 package ru.job4j;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 import ru.job4j.bot.Action;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
-
-import static org.junit.Assert.assertArrayEquals;
 
 /**
  * @author Aleksandr Smirnov.

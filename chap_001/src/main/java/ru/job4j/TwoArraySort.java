@@ -1,14 +1,15 @@
 package ru.job4j;
 
 /**
+ * The class concatenating two sorted arrays.
  * Class объединяющий два отсортированных массива.
- *
  * @author Aleksandr Smirnov.
  * @version 1
  * @since 05.02.2017.
  */
 public class TwoArraySort {
     /**
+     * The method concatenating two sorted array.
      * Метод объединяющий два отсортированных массива.
      * @param array    - first array
      * @param arrayTwo - second array

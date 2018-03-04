@@ -1,8 +1,8 @@
 package ru.job4j;
 
 import org.junit.Test;
-import ru.job4j.user.SortUser;
-import ru.job4j.user.User;
+import ru.job4j.services.SortUser;
+import ru.job4j.services.User;
 
 import java.util.*;
 
